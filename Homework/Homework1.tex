@@ -1,0 +1,53 @@
+\documentclass[addpoints]{exam}
+\usepackage[legalpaper]{geometry}
+\usepackage{etoolbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{relsize}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\lt}{\left}
+\newcommand{\rt}{\right}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[3][]{\frac{\partial^{#1} #2}{\partial #3^{#1}}}
+\newcommand{\lam}{\lambda}
+\newcommand{\ansSpace}{\vspace{70mm}}
+
+
+\title{Math 300 Homework 4}
+\author{Sathvik Chinta}
+\date{February 4th, 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{questions}
+\question Recall that in the textbook, a function f : A $\rightarrow$ B is said to be
+invertible f is one-to-one and onto. (This is also called bijection in some literature.)
+Show that a function f : A $\rightarrow$ B is invertible if and only if there is a function g :
+B $\rightarrow$ A such that g $\circ$ f = identity function on A and f $\circ$ g = identity 
+function on B.
+
+A function $F$ is called the identity function given that $F(x) = x$. We are given that $f(g(x)) 
+= x$ and $g(f(x)) = x$. We want to prove that $f$ is both one-to-one and onto. 
+
+Let $f(g(x)) = f(g(y))$. Given that this is the identity function, we know that $f(g(x)) = x$ 
+and $f(g(y)) = y$. As such, $x = y$. So, $f(g(x))$ is one-to-one. 
+
+
+
+
+\question Let f : A $\rightarrow$ B and g : B $\rightarrow$ C be functions. 
+(a) Prove that f and g are injective, then so is g $\circ$ f. Test
+
+(b) Suppose g $\circ$ f is surjective. Does it follow that f is surjective?
+
+(c) Suppose g $\circ$ f is surjective. Does it follow that g is surjective?
+
+\end{questions}
+
+\end{document}

@@ -1,3 +1,8 @@
 {
-  "image": "texlive/texlive:latest"
+  "image": "texlive/texlive:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": ["james-yu.latex-workshop", "github.copilot"]
+    }
+  }
 }

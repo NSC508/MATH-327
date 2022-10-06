@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1665094768 "/workspaces/MATH-327/Homework/Homework1.tex" "Homework1.pdf" "Homework1" 1665094768
+["pdflatex"] 1665094834 "/workspaces/MATH-327/Homework/Homework1.tex" "Homework1.pdf" "Homework1" 1665094834
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -78,10 +78,10 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1664687262 4596499 68637d504fbeb91e512431b62003567c ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1664687301 3058858 b95e2aee594badba2ba86076cd04055a ""
   "/usr/local/texlive/2022/texmf.cnf" 1664687257 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "/workspaces/MATH-327/Homework/Homework1.tex" 1665094768 1956 b9474c3f90f54d861ec7de8727a2bf82 ""
-  "Homework1.aux" 1665094768 1137 dbf0fb0ea7a85004a1303dc5fd48c37a "pdflatex"
+  "/workspaces/MATH-327/Homework/Homework1.tex" 1665094834 1957 c45b9ac14141ce829ff487f74b9c33d7 ""
+  "Homework1.aux" 1665094834 1137 dbf0fb0ea7a85004a1303dc5fd48c37a "pdflatex"
   "Homework1.out" 0 -1 0 "pdflatex"
-  "Homework1.tex" 1665094768 1956 b9474c3f90f54d861ec7de8727a2bf82 ""
+  "Homework1.tex" 1665094834 1957 c45b9ac14141ce829ff487f74b9c33d7 ""
   (generated)
   "Homework1.aux"
   "Homework1.log"

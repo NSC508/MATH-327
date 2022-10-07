@@ -32,6 +32,9 @@ Show that a function f : A $\rightarrow$ B is invertible if and only if there is
 B $\rightarrow$ A such that g $\circ$ f = identity function on A and f $\circ$ g = identity 
 function on B.
 
+We first prove that if there exists a function B $\rightarrow$ A such that g $\circ$ 
+f = identity function on A and f $\circ$ g = identity function on B, then $f$ is invertible.
+
 A function $F$ is called the identity function given that $F(x) = x$. We are given that $f(g(x)) 
 = x$ and $g(f(x)) = x$. We want to prove that $f$ is both one-to-one and onto. 
 
@@ -42,8 +45,14 @@ We know that $f(g(x)) = x$. Let $y \in B$. We want to show that for some $x \in 
 Since $f(g(x))$ is the identity function, we know that $f(g(y)) = y$. As such, when $x = y$, 
 $f(g(x)) = y$. So, $f(g(x))$ is onto.
 
-With similar lines of reasoning as above, we know that $g(f(x))$ is both one-to-one and onto as well. 
+With similar lines of reasoning as above, we know that $g(f(x))$ is both one-to-one and 
+onto as well. 
 
+Let $a \in B$. Since f $\circ$ g is the identity function, there exists 
+$b \in B$ such that $f(g(b)) = a$. So, if $x = g(b) \in B$, then $f(x) = a$. As such, 
+$f$ is onto. By a similar line of reasoning, $g$ is also onto.
+
+Let $x \in A$ and $y \in A$. Let $f(g(x)) = f(g(y))$. Since 
 
 
 \question Let f : A $\rightarrow$ B and g : B $\rightarrow$ C be functions.\\

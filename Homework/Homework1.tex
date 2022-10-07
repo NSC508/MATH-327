@@ -42,12 +42,37 @@ We know that $f(g(x)) = x$. Let $y \in B$. We want to show that for some $x \in 
 Since $f(g(x))$ is the identity function, we know that $f(g(y)) = y$. As such, when $x = y$, 
 $f(g(x)) = y$. So, $f(g(x))$ is onto.
 
+With similar lines of reasoning as above, we know that $g(f(x))$ is both one-to-one and onto as well. 
+
+
+
 \question Let f : A $\rightarrow$ B and g : B $\rightarrow$ C be functions.\\
 (a) Prove that f and g are injective, then so is g $\circ$ f. 
 
+Let $g(f(x)) = g(f(y))$. Since $g$ is injective, we know that $f(x) = f(y)$. Since $f$ is injective,
+we know that $x = y$. So, $g(f(x))$ is injective.
+
 (b) Suppose g $\circ$ f is surjective. Does it follow that f is surjective?
 
+Let $a \in B$. Since $g \circ f$ is surjective, there exists $x \in A$ such that $g(f(x)) = a$. However, 
+we do not know if $f(x) = a$. As such, $f$ is not surjective. 
+
 (c) Suppose g $\circ$ f is surjective. Does it follow that g is surjective?
+
+Let $a \in C$. Since g $\circ$ f is surjective, there exists $b \in B$ such that $g(f(b)) = a$. So, 
+if $x = f(b) \in B$, then $g(x) = a$. As such, $g$ is surjective.
+
+\question Let f: $A \rightarrow$ B. For a set $E \subset A$, the set $F(E) \subset B$ is defined by $F(E) = \{f(a): a \in E\}$, and 
+is called the image of $E$. For $F \subset B$, the set $f^{-1}(F) \subset A$ is defined by $f^{-1}(F) = \{a \in A: f(a) \in F\}$ and is 
+called the inverse image of $F$. \\
+(i) Let $E \subset A$. Prove that $E \subset f^{-1}(f(E))$. Give an example to show that the inclusion may be strict. 
+What happens when $f$ is injective? 
+
+(ii) Let $\Lambda$ be a set and that each $\lambda \in \Lambda$, let $E_{\lambda}$ be a subset of $A$. Prove that 
+\[f(\cup_{\lambda \in \Lambda}E_{\lambda}) = \cup_{\lambda \in \Lambda} f(E_\lambda) \text{ and } f(\cap_{\lambda \in \Lambda}E_{\lambda})
+\subset \cup_{\lambda \in \Lambda}f(E_\lambda)\]
+
+Give an example in which the last inclusion is proper. What happens when $f$ is injective?
 
 \end{questions}
 

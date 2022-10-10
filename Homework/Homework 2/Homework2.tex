@@ -29,9 +29,52 @@
 \question Let $x$ and $y$ be two positive numbers. 
 
 (i) Use the mathematical induction to show that if $x < y$, then $x^n < y^n$ for all
-n $\in$ $\mathbb{N}$.
+n $\in$ $\mathbb{N}$. 
+
+First, we let $k = 1$. Given that $x < y$, $x^{k} < y^{k} = x^{1} < y^{1} = x < y$ which we are given so it is true. 
+
+Now, we assume this is true for $k$. We want to show that it is true for $k+1$.
+
+\[x^{k} < y^{k}\]
+
+Since $x < y$, we can multiply both sides by $x$ to get
+
+\[x^{k+1} < y^{k}x\]
+
+Knowing that $x < x^{k} < y^{k}$, we can substitute $x$ for $y^{k}$ since the inequality will still hold. Thus, we can write
+
+\[x^{k+1} < y^{k}y^{k}\]
+\[x^{k+1} < y^{k+1}\]
 
 (ii) Deduce that if $x^n < y^n$ for some $n \in \mathbb{N}$, then $x < y$.
+
+Assume that $x^{n} < y^{n}$ for all $n$, but $x \geq y$. We then have two cases, 
+
+Case 1: $x = y$.
+
+If $x = y$. We can thus multiply both sides by $x$ and $y$ respectively (they are both equal, so 
+the order is irrelevant) $n$ times to get $x^{n} = y^{n}$ for all $n$. This is a contradiction to our original statment of 
+$x^{n} < y^{n}$, so $x \neq y$.
+
+Case 2: $x > y$.
+
+If $x > y$, we can multiply both sides by $y$ $n$ times to get 
+
+\[xy^{n} > yy^{n}\]
+
+Since $x^{n} < y^{n}$, we can substitute $y^{n}$ for $x^{n}$ since the inequality will still hold. Thus, we can write
+
+\[xx^{n} > yy^{n}\]
+
+\[x^{n+1} > y^{n+1}\]
+
+For all $n$. However, if we plug in $n = n - 1$, we get 
+
+\[x^{n} < y^{n}\]
+
+which is a contradiction to our original statement of $x^{n} < y^{n}$, so $x$ cannot be less than $y$. 
+
+Thus, we have shown that $x < y$.
 
 \question Do problem 17 on page 11 of the textbook [F]
 

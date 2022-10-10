@@ -38,21 +38,21 @@ f = identity function on A and f $\circ$ g = identity function on B, then $f$ is
 A function $F$ is called the identity function given that $F(x) = x$. We are given that $f(g(x)) 
 = x$ and $g(f(x)) = x$. We want to prove that $f$ is both one-to-one and onto. 
 
-Let $f(g(x)) = f(g(y))$. Given that this is the identity function, we know that $f(g(x)) = x$ 
-and $f(g(y)) = y$. As such, $x = y$. So, $f(g(x))$ is one-to-one. 
+If $f(x) = f(y)$, then $g(f(x)) = g(f(y))$. Thus, $x = y$. Thus, $f$ is one-to-one.
 
-We know that $f(g(x)) = x$. Let $y \in B$. We want to show that for some $x \in A$, $f(g(x)) = y$.
-Since $f(g(x))$ is the identity function, we know that $f(g(y)) = y$. As such, when $x = y$, 
-$f(g(x)) = y$. So, $f(g(x))$ is onto.
+For any $a \in A$, we have $a = f(g(a))$. Thus, $f(a) \in B$. Thus, $f$ is onto.
 
-With similar lines of reasoning as above, we know that $g(f(x))$ is both one-to-one and 
-onto as well. 
+Since $f$ is one-to-one and onto, $f$ is invertible.
 
-Let $a \in B$. Since f $\circ$ g is the identity function, there exists 
-$b \in B$ such that $f(g(b)) = a$. So, if $x = g(b) \in B$, then $f(x) = a$. As such, 
-$f$ is onto. By a similar line of reasoning, $g$ is also onto.
+Now, we attempt to prove that if $f$ is invertible, then there exists a function $g$ such that 
+$g \circ f$ = identity function on A and $f \circ g$ = identity function on B.
 
-Let $x \in A$ and $y \in A$. Let $f(g(x)) = f(g(y))$. Since 
+We shall prove by contradiction. Suppose that $f$ is invertible, but there does not exist a
+function $g$ such that $g \circ f$ = identity function on A and $f \circ g$ = identity function
+on B. However, since $f$ is invertible, $f$ is one-to-one and onto. As such, there exists a function 
+mapping $f(x) = y$ for some $y \in B$. Thus, there exists a function $g$ such that $g(y) = x$. Thus, 
+$g \circ f$ = identity function on A and $f \circ g$ = identity function on B. Thus, we have reached a
+contradiction. Thus, $f$ is invertible if and only if there exists a function $g$ such that $g \circ f$
 
 
 \question Let f : A $\rightarrow$ B and g : B $\rightarrow$ C be functions.\\
@@ -71,17 +71,148 @@ we do not know if $f(x) = a$. As such, $f$ is not surjective.
 Let $a \in C$. Since g $\circ$ f is surjective, there exists $b \in B$ such that $g(f(b)) = a$. So, 
 if $x = f(b) \in B$, then $g(x) = a$. As such, $g$ is surjective.
 
-\question Let f: $A \rightarrow$ B. For a set $E \subset A$, the set $F(E) \subset B$ is defined by $F(E) = \{f(a): a \in E\}$, and 
+\question Let f: $A \rightarrow$ B. For a set $E \subset A$, the set $f(E) \subset B$ is defined by $f(E) = \{f(a): a \in E\}$, and 
 is called the image of $E$. For $F \subset B$, the set $f^{-1}(F) \subset A$ is defined by $f^{-1}(F) = \{a \in A: f(a) \in F\}$ and is 
 called the inverse image of $F$. \\
 (i) Let $E \subset A$. Prove that $E \subset f^{-1}(f(E))$. Give an example to show that the inclusion may be strict. 
 What happens when $f$ is injective? 
 
+Let $a \in E$. Since $E \subset f^{-1}(f(E))$. We know that $f(a) \in f(E)$ by the definition of $f(E)$. As such, 
+$f(a) \in f^{-1}(f(E))$. So, $a \in f^{-1}(f(E))$. 
+
+If there were two elements in E that mapped to the same $f(a)$, however, then our inclusion would be strict ($f^{-1}(f(E))$ would be greater in size).
+
+If $f$ were injective, however, this would not be possible, meaning that $f^{-1}(f(E)) = E$.
+
 (ii) Let $\Lambda$ be a set and that each $\lambda \in \Lambda$, let $E_{\lambda}$ be a subset of $A$. Prove that 
 \[f(\cup_{\lambda \in \Lambda}E_{\lambda}) = \cup_{\lambda \in \Lambda} f(E_\lambda) \text{ and } f(\cap_{\lambda \in \Lambda}E_{\lambda})
-\subset \cup_{\lambda \in \Lambda}f(E_\lambda)\]
+\subset \cap_{\lambda \in \Lambda}f(E_\lambda)\]
 
 Give an example in which the last inclusion is proper. What happens when $f$ is injective?
+
+First, we prove $f(\cup_{\lambda \in \Lambda}E_{\lambda}) = \cup_{\lambda \in \Lambda} f(E_\lambda)$. 
+
+Let $\Lambda = \{\lambda_1, \lambda_2, ..., \lambda_n\}$ where $n$ is the size of $\Lambda$. We can expand the inside of the left equation to be
+
+\[f(\cup_{\lambda \in \Lambda}E_{\lambda}) = f(E_{\lambda_1} \cup E_{\lambda_2} \cup ... E_{\lambda_n})\]
+
+Now, we know that each $E_{\lambda_i}$ is a subset of $A$. Since $E_{\lambda_i}$ itself is a set, we can denote its members as
+$E_{\lambda_i} = \{{E_{\lambda_i}}_1, {E_{\lambda_i}}_2, ..., {E_{\lambda_i}}_m\}$ where $m$ is the size of $E_{\lambda_i}$. 
+
+By the definition of $f(E)$, we can then denote $f(E_{\lambda_i})$ as 
+$f(E_{\lambda_i}) = \{f({E_{\lambda_i}}_1), f({E_{\lambda_i}}_2), ..., f({E_{\lambda_i}}_m)\}$.
+
+Using the definition of union, we can denote the inner part of the right hand side as
+
+\[E_{\lambda_1} \cup E_{\lambda_2} \cup ... E_{\lambda_n} = \{{E_{\lambda_1}}_1, {E_{\lambda_1}}_2, ..., {E_{\lambda_1}}_{m1}, {E_{\lambda_2}}_1, {E_{\lambda_2}}_2, ..., {E_{\lambda_2}}_{m2}, ..., {E_{\lambda_n}}_{mn}\}\]
+
+Thus, $f(\cup_{\lambda \in \Lambda}E_{\lambda}) = \{f({E_{\lambda_1}}_1), f({E_{\lambda_1}}_2), ..., f({E_{\lambda_1}}_{m1}), f({E_{\lambda_2}}_1), f({E_{\lambda_2}}_2), ..., f({E_{\lambda_2}}_{m2}), ..., f({E_{\lambda_n}}_{mn})\}$
+
+Now, we can expand the right hand side to be
+
+\[\cup_{\lambda \in \Lambda} f(E_\lambda) = f(E_{\lambda_1}) \cup f(E_{\lambda_2}) \cup f(E_{\lambda_n})\]
+\[ = \{f({E_{\lambda_1}}_1), f({E_{\lambda_1}}_2), ..., f({E_{\lambda_1}}_{m1})\} \cup \{f({E_{\lambda_2}}_1), f({E_{\lambda_2}}_2), ..., f({E_{\lambda_2}}_{m2})\} \cup \{f({E_{\lambda_n}}_1), f({E_{\lambda_n}}_2), ..., f({E_{\lambda_n}}_{mn})\}\]
+\[= \{f({E_{\lambda_1}}_1), f({E_{\lambda_1}}_2), ..., f({E_{\lambda_1}}_{m1}), f({E_{\lambda_2}}_1), f({E_{\lambda_2}}_2), ..., f({E_{\lambda_2}}_{m2}), ..., f({E_{\lambda_n}}_{mn})\}\]
+
+Which we can see is the same as the left hand side. Thus, $f(\cup_{\lambda \in \Lambda}E_{\lambda}) = \cup_{\lambda \in \Lambda} f(E_\lambda)$.
+
+Next, we prove $f(\cap_{\lambda \in \Lambda}E_{\lambda}) \subset \cap_{\lambda \in \Lambda}f(E_\lambda)$.
+
+Let $a \in f(\cap_{\lambda \in \Lambda}E_{\lambda})$. We can expand the inside of the right hand side to be
+
+\[f(\cap_{\lambda \in \Lambda}E_{\lambda}) = f(E_{\lambda_1} \cap E_{\lambda_2} \cap ... E_{\lambda_n})\]
+
+In the trivial case, there are no shared elements between the $E_{\lambda_i}$, so $f(\cap_{\lambda \in \Lambda}E_{\lambda}) = \emptyset$.
+
+Similarly, for the right hand side we can expand it to be
+
+\[\cap_{\lambda \in \Lambda}f(E_\lambda) = f(E_{\lambda_1}) \cap f(E_{\lambda_2}) \cap f(E_{\lambda_n})\]
+
+If we assume the trivial case again, then $f(\cap_{\lambda \in \Lambda}E_{\lambda}) = \emptyset$, so $f(\cap_{\lambda \in \Lambda}E_{\lambda}) \subset \cap_{\lambda \in \Lambda}f(E_\lambda)$.
+
+If we assume the non-trivial case, then there exists some overlap between two or more of the $E_{\lambda_i}$ with $a$ being an element in said overlap ($a$ is present in two or more $f(E_{\lambda_i}$)). 
+
+Expanding out the right hand side, we can see that $a$ is an element of $f(E_{\lambda_1}) \cap f(E_{\lambda_2}) \cap f(E_{\lambda_n})$ since $a$ is present in two or more $f(E_{\lambda_i})$. 
+
+Thus $a \in \cap_{\lambda \in \Lambda}f(E_\lambda)$, so $f(\cap_{\lambda \in \Lambda}E_{\lambda}) \subset \cap_{\lambda \in \Lambda}f(E_\lambda)$.
+
+Since $f$ is being applied before the intersection on the left hand side, but after the intersection on the right hand side, we know that the inclusion may be proper.
+
+If, for instance, there were no common elements between the $E_{\lambda_i}$, then $f(\cap_{\lambda \in \Lambda}E_{\lambda}) = \emptyset$. However, assume that two elements (that are not equal) map
+to the same element in $f(E_{\lambda_i})$. Then, $f(\cap_{\lambda \in \Lambda}E_{\lambda})$ would contain that subset. As such, the inclusion in this case is proper. 
+
+If $f$ were injective, however, we would not have this problem. In this case, $f(\cap_{\lambda \in \Lambda}E_{\lambda}) = \cap_{\lambda \in \Lambda}f(E_\lambda)$.
+
+\question Let $X$ and $A$ be two sets. Here $A$ serves as an indexing set so that for each $\lambda \in \Lambda$, $A_\lambda$ is a subset of $X$. 
+Suppose $B \subset X$. Show that:
+
+(a) $B \cap (\cup_{\lambda \in \Lambda}A_{\lambda}) = \cup_{\lambda \in \Lambda}(B \cap A_{\lambda})$
+
+Lets expand the inner part of the left hand side of the equation. We have
+
+\[\cup_{\lambda \in \Lambda}A_{\lambda} = A_{\lambda_1} \cup A_{\lambda_2} ... \cup A_{\lambda_n}\]
+
+Where $n$ is the size of $\Lambda$. This simplifies to $A_\Lambda$. Taking the intersection of this set with B, we then get
+$B \cap A_\Lambda$. This will only contain elements that are in both $B$ and $A_\Lambda$.
+
+Looking at the right side of the equation, we then get the following:
+
+\[\cup_{\lambda \in \Lambda}(B \cap A_{\lambda}) = (B \cap A_{\lambda_1}) \cup (B \cap A_{\lambda_2}) ... \cup (B \cap A_{\lambda_n})\]
+
+Where $n$ is the size of $\Lambda$. Each individual term will only contain elements that are in both $B$ and $A_{\lambda_i}$. Thus, taking the
+union of these terms will only contain elements that are in both $B$ and $A_\Lambda$. Thus, both are equal. 
+
+(b) $B \cup (\cap_{\lambda \in \Lambda}A_{\lambda}) = \cap_{\lambda \in \Lambda}(B \cup A_{\lambda})$
+
+Lets expand the inner part of the left hand side of the equation. We have
+
+\[\cap_{\lambda \in \Lambda}A_{\lambda} = A_{\lambda_1} \cap A_{\lambda_2} ... \cap A_{\lambda_n}\]
+
+Where $n$ is the size of $\Lambda$. This will contain elements that are in all of the $A_{\lambda_i}$. We will denote this set as $S$. 
+Taking the union of this set with B, we then get $B \cup S$. This will contain elements that are in either $B$ or $S$ or both.
+
+Looking at the right side of the equation, we then get the following:
+
+\[\cap_{\lambda \in \Lambda}(B \cup A_{\lambda}) = (B \cup A_{\lambda_1}) \cap (B \cup A_{\lambda_2}) ... \cap (B \cup A_{\lambda_n})\]
+
+Where $n$ is the size of $\Lambda$. Each individual term will contain elements that are in either $B$ or $A_{\lambda_i}$ or both. Thus, taking the
+intersection of these terms will contain elements that are in either $B$ or $S$ or both. Thus, both are equal.
+
+(c) $(\cup_{\lambda \in \Lambda}A_{\lambda})^c = \cap_{\lambda \in \Lambda}(A_{\lambda})^c$
+
+Lets expand the inner part of the left hand side of the equation. We have
+
+\[(\cup_{\lambda \in \Lambda}A_{\lambda})^c = (A_{\lambda_1} \cup A_{\lambda_2} ... \cup A_{\lambda_n})^c\]
+
+Where $n$ is the size of $\Lambda$. This simplifies to $A_\Lambda$. Taking the complement of this set, we then get
+$(A_\Lambda)^c$. This will only contain elements that are not in $A_\Lambda$.
+
+Looking at the right side of the equation, we then get the following:
+
+\[\cap_{\lambda \in \Lambda}(A_{\lambda})^c = (A_{\lambda_1})^c \cap (A_{\lambda_2})^c ... \cap (A_{\lambda_n})^c\]
+
+Where $n$ is the size of $\Lambda$. Each individual term will only contain elements that are not in any $A_{\lambda_i}$. Thus, taking the
+intersection of these terms will only contain elements that are not in $A_\Lambda$. Thus, both are equal.
+
+(d) $(\cap_{\lambda \in \Lambda}A_{\lambda})^c = \cup_{\lambda \in \Lambda}(A_{\lambda})^c$
+
+Lets expand the inner part of the left hand side of the equation. We have
+
+\[(\cap_{\lambda \in \Lambda}A_{\lambda})^c = (A_{\lambda_1} \cap A_{\lambda_2} ... \cap A_{\lambda_n})^c\]
+
+Where $n$ is the size of $\Lambda$. This will contain elements that are in all of the $A_{\lambda_i}$. We will denote this set as $S$.
+
+Taking the complement of this set, we then get $(S)^c$. This will only contain elements that are not in $S$.
+
+Looking at the right side of the equation, we then get the following:
+
+\[\cup_{\lambda \in \Lambda}(A_{\lambda})^c = (A_{\lambda_1})^c \cup (A_{\lambda_2})^c ... \cup (A_{\lambda_n})^c\]
+
+Where $n$ is the size of $\Lambda$. Each individual term will only contain elements that are not in $A_{\lambda_i}$. Thus, taking the
+
+union of these terms will only contain elements that are not in $S$. Thus, both are equal.
+
+
 
 \end{questions}
 

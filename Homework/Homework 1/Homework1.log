@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.2)  7 OCT 2022 17:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.10)  10 OCT 2022 22:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/workspaces/MATH-327/Homework/Homework1.tex
-(/workspaces/MATH-327/Homework/Homework1.tex
+**"/workspaces/MATH-327/Homework/Homework 1/Homework1.tex"
+(/workspaces/MATH-327/Homework/Homework 1/Homework1.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28> (/usr/local/texlive/2022/texmf-dist/tex/latex/exam/exam.cls
 Document Class: exam 2021/02/26 Version 2.7 by Philip Hirschhorn
@@ -217,8 +217,8 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2022/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
@@ -391,7 +391,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-This exam contains 3 questions with 0 parts, 0 subparts, and 0 subsubparts.
+Overfull \hbox (8.07025pt too wide) in paragraph at lines 102--104
+[]\OT1/cmr/m/n/10 By the def-i-ni-tion of $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 )$, we can then de-note $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 )$ as $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; :::; f\OT1/cmr/m/n/10 ([][])\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/10 . 
+ []
+
+
+Overfull \hbox (19.06946pt too wide) in paragraph at lines 109--110
+[]\OT1/cmr/m/n/10 Thus, $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 [[]\OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; :::; f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; :::; f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; :::; f\OT1/cmr/m/n/10 ([][])\OMS/cmsy/m/n/10 g$ 
+ []
+
+
+Overfull \hbox (44.78732pt too wide) detected at line 114
+\OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; :::; f\OT1/cmr/m/n/10 ([][])\OMS/cmsy/m/n/10 g [ f\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; :::; f\OT1/cmr/m/n/10 ([][])\OMS/cmsy/m/n/10 g [ f\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; f\OT1/cmr/m/n/10 ([][])\OML/cmm/m/it/10 ; :::; f\OT1/cmr/m/n/10 ([][])\OMS/cmsy/m/n/10 g
+ []
+
+[2] [3]
+This exam contains 4 questions with 0 parts, 0 subparts, and 0 subsubparts.
 This exam has a total of 0 points.
 This exam has a total of 0 bonus points.
 (./Homework1.aux)
@@ -399,18 +414,18 @@ Package rerunfilecheck Info: File `Homework1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10169 strings out of 475071
- 158705 string characters out of 5778916
- 538278 words of memory out of 5000000
- 31465 multiletter control sequences out of 15000+600000
+ 10178 strings out of 475071
+ 158834 string characters out of 5778915
+ 541311 words of memory out of 5000000
+ 31471 multiletter control sequences out of 15000+600000
  475902 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,77p,285b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Homework1.pdf (1 page, 91529 bytes).
+ 72i,11n,77p,342b,553s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Homework1.pdf (3 pages, 118964 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 77 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

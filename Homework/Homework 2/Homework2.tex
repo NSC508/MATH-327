@@ -41,9 +41,9 @@ Since $x < y$, we can multiply both sides by $x$ to get
 
 \[x^{k+1} < y^{k}x\]
 
-Knowing that $x < x^{k} < y^{k}$, we can substitute $x$ for $y^{k}$ since the inequality will still hold. Thus, we can write
+Knowing that $x < y$, we can substitute $x$ for $y$ since the inequality will still hold. Thus, we can write
 
-\[x^{k+1} < y^{k}y^{k}\]
+\[x^{k+1} < y^{k}y\]
 \[x^{k+1} < y^{k+1}\]
 
 (ii) Deduce that if $x^n < y^n$ for some $n \in \mathbb{N}$, then $x < y$.
@@ -76,11 +76,90 @@ which is a contradiction to our original statement of $x^{n} < y^{n}$, so $x$ ca
 
 Thus, we have shown that $x < y$.
 
-\question Do problem 17 on page 11 of the textbook [F]
+\question Do problem 17 on page 11 of the textbook [F]. Define 
+
+\[S = \{x \text{  }| \text{ } x \text{ in } \mathbb{R}, x \geq 0, x^2 < c \}\]
+
+a. Show that $c + 1$ is an upper bound for $S$ and therefore, by the Completeness Axiom, $S$ has a least upper bound
+that we denote by $b$.
+
+We know that every element of the set $S$ must be greater than or equal to $0$. Furthermore, we know that every 
+element in $x^2$ must be less than $c$. First, we prove that for all $x \geq 0$, $x \leq x^2$. When $x = 0$, we have 
+
+\[0 \leq 0^2 = 0\]
+
+When $x > 0$ (equivalent to $x \geq 1$), we can substitute $x^2$ for $xx$ to get
+
+\[x \leq xx\]
+
+Dividing both sides by $x$ gives us
+
+\[1 \leq x\]
+
+Which is the exact solution set we wanted. Thus, we have shown that for all $x \geq 0$, $x \leq x^2$.
+
+Now, we can say that $x \leq x^2 < c$. For all integers $c$, $c + 1 > c$. Thus, we can write 
+
+\[x \leq x^2 < c \leq c + 1\]
+
+Thus, we know that $x < c + 1$ for all $x$ in $S$, so $c + 1$ is an upper bound for $S$.
+
+By the completeness axiom, if $S$ has some upper bound, then there must be some least upper bound for the set 
+$S$. Thus, there must exist some $b$ such that $b$ is an upper bound for $S$ and $b$ is the least upper bound for $S$.
+
+b. Show that if $b^2 > c$, then we can choose a suitably small positive number $r$ such that $b - r$ is also an upper
+bound for $S$, thus contradicting the choice of $b$ as the $least$ upper bound for $S$.
+
+We know that $x^2 < c$ for all $x$ in $S$. If we take the square root from both sides, we find that the theoretical 
+solution set is $x \in \mathbb{R}$ such that $x \geq 0$ and $x < \sqrt{c}$. Knowing that $b^2 > c$, we can take the 
+square root from both sides of the inequality to get $b > \sqrt{c}$. Thus, we know that $b > \sqrt{c}$. We can then write
+$x < \sqrt{c} < b$. If we take the difference between both sides, we get $x < b - \sqrt{c}$. Thus, we know that $b - \sqrt{c}$ 
+must also be an upper bound for $S$. Since $c$ is positive, we know that $b - \sqrt{c} < b$. Thus, $b$ cannot be the $least$ upper
+bound of $S$. 
+
+c. Show that if $b^2 < c$, then we can choose a suitably small positive number $r$ such that $b + r$ belongs 
+to $S$, thus contradicting the choice of $b$ as $an$ upper bound for $S$.
+
+We assume that $b^2 < c$ and show that there must exist some $r$ such that $b + r$ belongs to $S$. We can expand $(b + r)^2$ as 
+
+\[(b + r)^2 = b^2 + 2br + r\]
+
+Let $r \leq b$, meaning that $r^2 \leq br$. Thus, we can write
+
+\[(b + r)^2 = b^2 + 2br + r^2 \leq b^2 + 3br\]
+
+Now, we asssumed $r \leq b$. We can further impose write $r < \frac{c - b^2}{3b}$ since $b^2 < c$ and $b < \sqrt{c}$. 
+
+Thus, we get 
+
+\[(b + r)^2 = b^2 + 2br + r^2 \leq b^2 + 3br < b^2 + 3b(\frac{c - b^2}{3b}) = b^2 + c - b^2 = c\]
+
+Thus we have shown that $b + r$ belongs to $S$, meaning that $b + r < b$ which is a contradiction! So $b$ cannot be an upper bound for $S$.
+
+d. Use parts (b) and (c) and the Positivity Axioms for $\mathbb{R}$ to conclude that $b^2 = c$. 
 
 \question Suppose that $S$ is a non-empty set of real numbers that is bounded. Prove
 that inf $S \leq$ sup $S$, and the quality holds if and only if $S$ consists of exactly
 one number.
+
+We must prove this both ways. We start with if inf $S \leq$ sup $S$, then $S$ consists of exactly one number.
+
+We will prove by contradiciton. Assume that $S$ has more than one number in it. Then, there exists $x$ and $y$ 
+in $S$ such that $x \neq y$. Thus, either $x < y$ or $x > y$. Assume that $x < y$. Since $S$ is bounded, there exists a lower bound 
+inf $S$ such that every element of $S$ is greater than or equal to it. Thus, we can write inf $S \leq x < y$. 
+Similarly, there exists an upper bound sup $S$ such that every element of $S$ is less than or equal to it. 
+Thus, we can write inf $S \leq x < y \leq$ sup $S$. However, since the inequality between $x$ and $y$ is strict, 
+inf $S <$ sup $S$ is also strict. This is a contradiction to our original statement of inf $S \leq$ sup $S$ since the
+two values can never be equivalent, so $S$ must consist of exactly one number.
+
+Now, we prove that if $S$ consists of exactly one number, then inf $S \leq$ sup $S$.
+
+Since $S$ consists of exactly one number, we can write $S = \{x\}$. By definition, inf $S = x$ and sup $S = x$.
+Thus, we can write inf $S = x =$ sup $S$. This is contained in inf $S \leq$ sup $S$ since inf $S \leq$ sup $S$ 
+is an equivalence relation. Thus, we have shown that if $S$ consists of exactly one number, then inf $S \leq$ sup $S$.
+
+Thus inf $S \leq$ sup $S$, and the quality holds if and only if $S$ consists of exactly one number.
+
 
 \question Do Problem 10 on page 11 of the textbook [F].
 

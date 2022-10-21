@@ -1,0 +1,169 @@
+\documentclass[addpoints]{exam}
+\usepackage[legalpaper]{geometry}
+\usepackage{etoolbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{relsize}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\lt}{\left}
+\newcommand{\rt}{\right}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[3][]{\frac{\partial^{#1} #2}{\partial #3^{#1}}}
+\newcommand{\lam}{\lambda}
+\newcommand{\ansSpace}{\vspace{70mm}}
+
+
+\title{Math 327 Homework 1}
+\author{Sathvik Chinta}
+\date{October 7th, 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{questions}
+\question For each of the following two sets, find the maximum, minimum, infimum, and
+supremum if they are defined. Justify your conclusions. 
+
+a. $\{ 1/n \text{ } | \text{ } n \text{ in } \mathbb{N} \}$ \\
+maximum:
+
+The set $\{ 1/n \text{ } | \text{ } n \text{ in } \mathbb{N} \}$ consists of values
+
+\[\{1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, ..., \frac{1}{n}\}\]
+
+Notice that $1 > \frac{1}{2} > \frac{1}{3} > \frac{1}{4}, ..., \frac{1}{n}$. Thus, 
+this set is strictly decreasing. Therefore, the maximum of this set is $1$.
+
+minimum:
+
+There is no minimum for this set. This is because for any $1/n$, 
+$1/(n+1)$ is also in the set and smaller in value. 
+
+infimum:
+
+For any $\frac{1}{n} \in \mathbb{N}$, $0 < \frac{1}{n}$. If there is an $\epsilon > 0$,
+we can find an $n \in \mathbb{N}$ such that $0 < \frac{1}{n} < \epsilon$ by the 
+Archimedean principle. Thus, the infimum of this set is $0$.
+
+supremum:
+
+The defintion of the supremum of a set is the least upper bound of the set. In other words, 
+if there is an upper bound $b$ for the set, $b \geq x$ for all $x$ in the set. Since the 
+maximum of this set is $1$, the supremum of this set is also $1$. Any value less than 
+$1$ is not an upper bound for the set since $1$ is in the set, while any value greater
+than $1$ is not the least upper bound for the set since $1$ is a smaller upper bound.
+
+b. $\{ x \text{ in } \mathbb{R} \text{ } | \text{ } x^2 < 2 \}$ \\
+maximum:
+
+The set $\{ x \text{ in } \mathbb{R} \text{ } | \text{ } x^2 < 2 \}$ contains
+an infinite number of values. Thus, there is no maximum for this set since for any 
+potential maximum $x$ in the set, there exists some real number $q < \sqrt{2}$ such that
+$x < q$.
+
+minimum:
+
+The set $\{ x \text{ in } \mathbb{R} \text{ } | \text{ } x^2 < 2 \}$ contains
+an infinite number of values. Thus, there is no minimum for this set since for any
+potential minimum $x$ in the set, there exists some real number $q > -\sqrt{2}$ such that
+$x > q$.
+
+infimum:
+
+The infimum of this set is $-\sqrt{2}$. This is because $-\sqrt{2} \leq x$ for
+all $x$ in the set. Any value greater than $-\sqrt{2}$ (which we denote as $x$)
+is not a lower bound for the set because there must exist some real number $q$ 
+in the set such that $-\sqrt{2} < q < x$ for all x. 
+
+supremum:
+
+The supremum of this set is $\sqrt{2}$. This is because $\sqrt{2} \geq x$ for all
+$x$ in the set. Any value less than $\sqrt{2}$ (which we denote as $x$) is 
+not an upper bound for the set because there must exist some real number $q$ 
+in the set such that $x < q < \sqrt{2}$ for all x. 
+
+\question 
+
+a. Prove that if $n$ is a natural number, then $2^n >n$. \\
+
+We prove by induction. The base case is $n = 1$. Then $2^1 = 2 > 1$. Thus, the base case is true.
+
+Now, assume that $2^k > k$ for some $k \in \mathbb{N} < n$. We must show that $2^{k+1} > k+1$.
+
+\begin{align*}
+2^{k} &> k \\
+\end{align*}
+
+\text{multiply both sides by 2} \\
+
+\begin{align*}
+    2 * 2^{k} &>  2* k \\
+    2^{k+1} &> 2 * k
+\end{align*}
+
+Now, we prove that $2 * k > k + 1$. We prove by induction. The base case is $k = 1$. Then $2 * 1 = 2 > 1 + 1$. Thus, the base case is true.
+
+Now, assume that $2 * g > g + 1$ for all $g \in \mathbb{N} < k$. We must show that 
+$2 * (g+1) > (g+1) + 1$. This is equivalent to showing that $2g + 2 > g + 2$.
+
+\begin{align*}
+2 * g &> g + 1 \\
+\end{align*}
+
+\text{add 2 to both sides} \\
+
+\begin{align*}
+    2 * g + 2 &> g + 3 \\
+\end{align*}
+
+Since $g + 3 > g + 2$ for all $g \in \mathbb{N}$, we have that $2g + 2 > g + 2$ for all $g \in \mathbb{N}$.
+
+Thus, $2*k > k + 1$. Since $2 * k > k + 1$ for all $k \in \mathbb{N}$, we have that $2^{k+1} > 2 * (k + 1)$ for all $k \in \mathbb{N}$.
+
+Thus, $2^n > n$ for all $n \in \mathbb{N}$.
+
+b. Prove that $n$ is a natural number, then 
+\[n = 2^{k_0}l_0\]
+for some odd natural number $l_0$ and some nonnegative integer $k_0$. (Hint: if $n$ is odd, 
+let $k= 0$ and $l = n$; if $n$ is even, let $A = \{k \text{ in } \mathbb{N} \text{ } | \text{ }
+n = 2^{k}l \text{ for some } $l$ \text{ in } \mathbb{N}.\}$ By (a), $A \subseteq \{1, 2, ..., n\}$. Choose
+$k_0$ to be the maximum of $A$.)\\
+
+We prove by induction. The base case is $n = 1$. Then $1 = 2^{0}1$. Thus, the base case is true.
+
+We assume that this is true for some $g$ in $\mathbb{N} < n$. Thus, $g = 2^{k_0}l_0$ for some
+odd natural number $l_0$ and some nonnegative integer $k_0$. We must show that this is true for $g+1$
+as well. 
+
+If $g + 1$ is odd, then 
+
+\begin{align*}
+    g + 1 &= 2^0(g+1) \\
+\end{align*}
+
+Since $0$ is a nonnegative integer and $g+1$ is odd. 
+
+If $g + 1$ is even, then $\frac{g + 1}{2}$ is some integer as well. By our 
+hypothesis, $\frac{g + 1}{2} = 2^{k_0}l_0$ for some odd natural number $l_0$ and some nonnegative integer $k_0$. Thus,
+
+\begin{align*}
+    \frac{g + 1}{2} &= 2^{k_0}l_0 \\
+    g + 1 &= 2^{k_0+1}l_0 \\
+\end{align*}
+
+Since $k_0 + 1$ is a nonnegative integer and $l_0$ is an odd natural number,
+the statement is true for $g+1$ as well.
+
+Thus, $n = 2^{k_0}l_0$ for some odd natural number $l_0$ and some nonnegative integer $k_0$ for all 
+$n \in \mathbb{N}$.
+
+\question A real number of the form $m/2^n$ where $m$ and $n$ are integers, is
+called a dyadic rational. Prove that the set of dyadic rationals is dense in $\mathbb{R}$.\\
+\end{questions}
+
+\end{document}

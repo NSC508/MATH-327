@@ -17,9 +17,9 @@
 \newcommand{\ansSpace}{\vspace{70mm}}
 
 
-\title{Math 327 Homework 1}
+\title{Math 327 Homework 3}
 \author{Sathvik Chinta}
-\date{October 7th, 2022}
+\date{October 21th, 2022}
 
 \begin{document}
 
@@ -41,8 +41,7 @@ this set is strictly decreasing. Therefore, the maximum of this set is $1$.
 
 minimum:
 
-There is no minimum for this set. This is because for any $1/n$, 
-$1/(n+1)$ is also in the set and smaller in value. 
+There is no minimum for this set. This is because the infimum is not a member of the set.
 
 infimum:
 
@@ -61,17 +60,11 @@ than $1$ is not the least upper bound for the set since $1$ is a smaller upper b
 b. $\{ x \text{ in } \mathbb{R} \text{ } | \text{ } x^2 < 2 \}$ \\
 maximum:
 
-The set $\{ x \text{ in } \mathbb{R} \text{ } | \text{ } x^2 < 2 \}$ contains
-an infinite number of values. Thus, there is no maximum for this set since for any 
-potential maximum $x$ in the set, there exists some real number $q < \sqrt{2}$ such that
-$x < q$.
+There is no maximum for this set since the supremum is not a member of the set.
 
 minimum:
 
-The set $\{ x \text{ in } \mathbb{R} \text{ } | \text{ } x^2 < 2 \}$ contains
-an infinite number of values. Thus, there is no minimum for this set since for any
-potential minimum $x$ in the set, there exists some real number $q > -\sqrt{2}$ such that
-$x > q$.
+There is no minimum for this set since the infimum is not a member of the set.
 
 infimum:
 
@@ -164,6 +157,92 @@ $n \in \mathbb{N}$.
 
 \question A real number of the form $m/2^n$ where $m$ and $n$ are integers, is
 called a dyadic rational. Prove that the set of dyadic rationals is dense in $\mathbb{R}$.\\
+
+A set is dense in $\mathbb{R}$ if for every $a < b$, there is some $x$ in the target set
+such that $a < x < b$. So, if we prove that $a < \frac{m}{2^n} < b$, then we have shown that
+the set of dyadic rationals is dense in $\mathbb{R}$.
+
+By Archimedes Principle we know that there must exist some $\frac{1}{n}$ in the interval 
+$a < b$. So, we can re-write this as $\frac{1}{n} < b - a$.  By 2(a), we know that $2^n > n$, 
+so the inequaltiy $\frac{1}{2^n} < \frac{1}{n} < b - a$ must hold. We claim that there must be 
+some $m$ such that $a < \frac{m}{2^n} <b$. We prove this by contradiction. 
+
+Assume there is no $m$ such that $a < \frac{m}{2^n} <b$. This will only be possible if 
+the distance between the two numbers is less than $\frac{1}{2^n}$. In other words, 
+$b - a \leq \frac{1}{2^n}$. However, this is a contradiction to what we have proven earlier 
+since $\frac{1}{2^n} < \frac{1}{n} < b - a$. Thus, there must be some $m$ such that $a < \frac{m}{2^n} <b$.
+
+Thus, the set of dyadic rationals is dense in $\mathbb{R}$.
+
+\question For each of the following statments, determine whether it is true or false and 
+justify your answer
+
+(a) The set $\mathbb{Z}$ of integers is dense in $\mathbb{R}$
+
+A set is dense in $\mathbb{R}$ if for every $a < b$, there is some $x$ in the target set
+such that $a < x < b$. However, if we let $b - a \leq 1$, then there cannot be any $x \in \mathbb{Z}$
+in this interval. For instance, if $b = 1$ and $a = 0$, then there is no $x \in \mathbb{Z}$ between
+0 and 1. Thus, the set $\mathbb{Z}$ is not dense in $\mathbb{R}$.
+
+(b) The set of positive real numbers is dense in $\mathbb{R}$
+
+A set is dense in $\mathbb{R}$ if for every $a < b$, there is some $x$ in the target set
+such that $a < x < b$. However, if we choose $b$ and $a$ to both be negative, then 
+there cannot be any $x$ in the set of positive real numbers in this interval. For instance, if
+$b = -1$ and $a = -2$, then there is no $x \in \mathbb{R}^+$ between -2 and -1. Thus, the set of
+positive real numbers is not dense in $\mathbb{R}$.
+
+(c) The set of $\mathbb{Q}/\mathbb{N}$ of rational numbers that are not integers is dense in $\mathbb{R}$
+
+A set is dense in $\mathbb{R}$ if for every $a < b$, there is some $x$ in the target set
+such that $a < x < b$. This set is dense in $\mathbb{R}$ because, by definition, $Q$ and $N$ are both 
+dense in $\mathbb{R}$. Thus, the set of $\mathbb{Q}/\mathbb{N}$ is dense in $\mathbb{R}$. 
+
+\question Suppose that the number $a$ has the property that for every natural number $n$, 
+$a \leq 1/n$. Prove that $a \leq 0$. 
+
+We prove by contradiction. Let $a > 0$. Let $\epsilon$ be some positive real number. 
+Then, there must exist some $n$ such that $0 < \frac{1}{n} < \epsilon$ for all $n$. However, 
+if $a > 0$, then in order for this inequality to be satisfied, $a > \frac{1}{n}$ to get 
+$0 < \frac{1}{n} < a < \epsilon$. This is a contradiction to the fact that $a \leq 1/n$ for all $n$.
+
+\question For each of the following statments, determine whether it is true or false and
+justify your answer
+
+a. If the sequence $\{{a_n}^2\}$ converges, then the sequence $\{a_n\}$ converges.
+
+If the sequence $\{{a_n}^2\}$ converges, then it is bounded. Since it is bounded, 
+$\exists x \in \mathbb{R}$ such that $|a_n|^2 \leq x$. Thus, $|a_n| \leq \sqrt{x}$, therefore 
+$\{a_n\}$ is bounded. Since $\{a_n\}$ is bounded, it converges.
+
+b. If the sequence $\{a_n + b_n\}$ converges, then the sequences $\{a_n\}$ and $\{b_n\}$ also converge.
+
+Let all elements of $\{a_n\}$ be real numbers $\mathbb{R}$ and all elements of $\{b_n\}$ be negative 
+real numbers $\mathbb{R}^-$, then $\{a_n + b_n\}$ is will cancel out to 0 and thus converge. However, 
+both sets are unbounded, so $\{a_n\}$ and $\{b_n\}$ do not converge
+
+c. If the sequence $\{a_b + b_n\}$ and $\{a_n\}$ converge, then the sequence $\{b_n\}$ also converges.
+
+Let $\{a_b + b_n\}$ converge to some value $x$ and $\{a_n\}$ converge to some value $y$. Then,
+
+$$\lim_{n \to \infty} ((a_n + b_n) - (b_n)) = \lim_{n \to \infty} a_n$$
+
+So,
+
+\begin{align*}
+    \lim_{n \to \infty} ((a_n + b_n) - (b_n)) &= \lim_{n \to \infty} (a_n + b_n) - \lim_{n \to \infty} (b_n) \\ 
+    x &= y - \lim_{n \to \infty} (b_n) \\
+    x - y &= -\lim_{n \to \infty} (b_n) \\
+    \lim_{n \to \infty} (b_n) &= y - x
+\end{align*}
+
+So, $\{b_n\}$ converges to $y - x$.
+
+d. If the sequence $\{|a_n|\}$ converges, then the sequence $\{a_n\}$ also converges.
+
+Let $\{a_n\} = \{(-1)^n\}$. Then, $\{a_n\}$ does not converge but $\{|a_n|\}$ does converge ($\{|a_n|\} = {1}$ for all $n$). Thus,
+this is false.  
+
 \end{questions}
 
 \end{document}

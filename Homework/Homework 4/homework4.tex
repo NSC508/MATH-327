@@ -100,6 +100,71 @@ $|a_n|^n < |a + \epsilon|^n$.
 By proposition 2.28 in the textbook, since $|a + \epsilon| < 1$, $|a + \epsilon|^n$ converges to 0. Since
 $|a_n|^n < |a + \epsilon|^n$ for all $n \geq N$, we know that $(a_n)^n$ converges to 0 as well. 
 
+\question
+
+We define $D$ as a set of sequences. If we write 
+
+$n_0n_1n_2...$ for all $n_k \in D$, then we get $n_0.012345678012345678\dots$. Since 
+every element of D is encompassed in this decimal, it gives an order on D. If we define $j$ as 
+the smallest non-negative integer such that $n_j \neq m_j$, we can multiple both $n_0.n_1n_2n_3\dots$ and
+$m_0.m_1m_2m_3\dots$ by $10^j$ to get $n_0n_1n_2\dots n_j.n_{j+1}\dots$ and $m_0m_1m_2\dots m_j.m_{j+1}\dots$.
+Since $n_j \neq m_j$. Using this definition, the $\prec$ operator behaves the same as the inequality 
+operator, thus making D a linear order and making it so that if $x, y \in D$, then only one of the 
+following statements is true: $x \prec y$, $x \succ y$, or $x = y$. Furthermore, if $x, y, z \in D$ and 
+$x \prec y$ and $y \prec z$, then $x \prec z$.
+
+\question Properties
+
+
+i. If $n_k > 9$, then $\frac{n_1}{10} \geq 1$, thus in the boundary $(x_0, x_1)$ there must exist some
+integer $> x$, which is a contradiction to our initial conditions.  
+
+ii.
+
+iii. Since $n_k \in \{0, 1, 2, \dots 9\}$ for all $k \in \mathbb{N}$, 
+and $k \geq 0$, $\frac{n_k}{10^k} > 0$, so $x_{k-1} \leq x_k$ for all $k \in \mathbb{N}$.
+
+iv. 
+
+v. Since the sequence is monotonically increasing, if x < y in $\mathbb{R}$, this implies the 
+choice of the initial $n_0$ is smaller. Thus, $x < y$ implies $D(x) \prec D(y)$ and vice versa.
+
+\question 
+
+i. For each of the following statements, determine whether it is true or false and justify your answer
+
+a. Every bounded sequence converges
+
+False. Let the sequence consist of entirely 0s and 1s, each alternating in occurance. In this case, 
+bounds are known but the sequence does not converge.
+
+b. A convergent sequence of positive numbers has a positive limit
+
+True, a negative limit would imply that the sequence is bounded below by a negative number and that 
+the sequence is monotonically decreasing. If the set only containts positive numbers, 0 will always 
+be a lower bound and thus the lowest possible value for a limit is 0. 
+
+c. The sequence $\{n^2 + 1\}$ converges
+
+No, the sequence will tend towards infinity as $n \to \infty$.
+
+d. A convergent sequence of rational numbers has a rational limit
+
+False, a convergent sequence of rational numbers can have an irrational limit. For example, the sequence
+$(1 + \frac{1}{n})^n$ converges to $e$.
+
+e. The limit of a convergent sequnce in the interval (a, b) also belongs to (a, b)
+
+True, if a sequence is in an interval and it converges to a number in that interval, then the limit must
+also be in that interval.
+
+ii. Show that the set of irrational numbers fails to be closed
+
+We let $x$ to be a rational number. We let $a_n$ be the sequence of irrational numbers such that 
+$a_n$ converges to $x$. Since the set of irrational numbers cannot contain $x$, but there exists a 
+sequence within the set of irrational numbers that converges to $x$, the set of irrational numbers
+cannot be closed.
+
 \end{questions}
 
 \end{document}

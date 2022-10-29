@@ -119,12 +119,18 @@ $x \prec y$ and $y \prec z$, then $x \prec z$.
 i. If $n_k > 9$, then $\frac{n_1}{10} \geq 1$, thus in the boundary $(x_0, x_1)$ there must exist some
 integer $> x$, which is a contradiction to our initial conditions.  
 
-ii.
+ii. For any given $x_k$, $x_k < x$. Thus, $0 \leq x - x_k$. Since the interval boundary between the two can 
+never contain an integer, we know that $x - x_k < 1$. As well. Since we state that $x_0 = n_0$,
+$x_k$ can be expanded as $x_k = \frac{n_k}{10^k} + \frac{n_{k- 1}}{10^{k - 1}} + \frac{n_{k- 2}}{10^{k - 2}} + \dots + n_0 \leq \frac{1}{10^k}$.
+Thus, we can write $0 \leq x - x_k \leq \frac{1}{10^k}$.
 
 iii. Since $n_k \in \{0, 1, 2, \dots 9\}$ for all $k \in \mathbb{N}$, 
 and $k \geq 0$, $\frac{n_k}{10^k} > 0$, so $x_{k-1} \leq x_k$ for all $k \in \mathbb{N}$.
 
-iv. 
+iv. This sequence is non-repeating, so there must exist some $k > j$ such that $n_k \neq 9$ for all 
+$j \in \mathbb{N}$. Furthermore, we have already established $n_k \in {0, 1, 2, \dots 9}$ and since 
+$n_0$ is an integer it follows that $n_0 \in \mathbb{Z}$. Thus, the set is the same as the set of D
+from the previous question.
 
 v. Since the sequence is monotonically increasing, if x < y in $\mathbb{R}$, this implies the 
 choice of the initial $n_0$ is smaller. Thus, $x < y$ implies $D(x) \prec D(y)$ and vice versa.

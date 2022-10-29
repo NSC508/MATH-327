@@ -1,0 +1,261 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%   The MIT License (MIT)
+%
+%   Copyright (c) 2021 Jitin Nair
+%
+%   Permission is hereby granted, free of charge, to any person obtaining a copy
+%   of this software and associated documentation files (the "Software"), to deal
+%   in the Software without restriction, including without limitation the rights
+%   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%   copies of the Software, and to permit persons to whom the Software is
+%   furnished to do so, subject to the following conditions:
+%   
+%   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%   THE SOFTWARE.
+%   
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%   DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a12paper]{article}
+\usepackage[fontsize=7.5pt]{scrextend}
+
+%----------------------------------------------------------------------------------------
+%   FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}    
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}               
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%   BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%   TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Nitish Sathvik Chinta} \\[7.5pt]
+\href{https://github.com/NSC508}{\raisebox{-0.05\height}\faGithub\ NSC508} \ $|$ \ 
+\href{https://www.linkedin.com/in/sathvik-chinta/}{\raisebox{-0.05\height}\faLinkedin\ sathvik-chinta} \ $|$ \ 
+\href{tel:+14256337394}{\raisebox{-0.05\height}\faMobile \ +1-425-633-7394} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+% \section{Summary}
+% Student studying at the University of Washington - Seattle who loves all things Machine Learning and Software Engineering. Currently working on a multitude of projects leveraging new languages, frameworks, and cloud technology. Seeking a position in order to gain industry experience while simultaneously expanding my knowledge in programming and applications. I want to work for a company that will allow me to spread my knowledge, challenge me with difficult yet rich problems, and provide me with an opportunity to grow.
+
+%Experience
+\section{Work Experience}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Tech/ML Lead - Ivory.ai} & \hfill Jan 2022 - Present \\[1.75pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Was one of the first 3 members of the team, responsible for building the ML pipeline and models. Creating machine learning models to assist dentists in diagnosing cavities, gum disease, etc using X-rays using transfer learning on popular backbones such as YOLO and Detectron2
+            \item[--] Currently experimenting with transformer-based architectures to improve performance, while also testing GAN networks to generate data for rare classes 
+        \end{itemize}
+        \end{minipage}
+    }
+    \end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Science/Machine Learning Intern - Coupang} & \hfill Jun 2022 - Sept 2022 \\[1.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Made a machine learning model to automatically identify and classify logos in images to filter out counterfeit items being sold on the website automatically. 
+        \item[--] Created model with $>90\%$ precision and recall on the most popular logos using transfer learning on YOLOv5, trained on a dataset of over 150k images. Created automated scripts to automate adding more logos to the model and re-train with little user input necessary. 
+        \item[--] Worked with a remote team in South Korea to understand the business problem and develop a solution
+        \item[--] Learned how to do independent research on the latest advancements in the field of computer vision and machine learning and implemnent my findings with little to no supervision. Also learned how to work with large data, and filter out "bad data" at a large scale.
+        \item[--] Used cloud technologies such as AWS EC2, Lambda, S3, and API Gateway 
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{EE 497/498 Capstone - University of Washington} & \hfill Jan 2022 - Jun 2022 \\[1.75pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Worked with both the Electrical Engineering and Computer Science departments in addition to Coupang to develop computer vision models for Coupang's marketplace. Worked as a mentor/student hybrid alongside a team of 4 other students
+            \item[--] Personally worked on an image upscaling model to improve the quality of images on the marketplace as sellers would upload low-quality images of their products leading to loss of potential sales.
+            \item[--] Learned how to quickly and efficiently research and implement new ideas in the field of computer vision and machine learning (GAN models specifically for this problem). Utilized technologies such as EC2 and S3. Succesfully created and deployed the model to production.
+        \end{itemize}
+        \end{minipage}
+    }
+    \end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Software Engineering Intern - Amazon} & \hfill Sept 2021 - Dec 2021 \\[1.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Worked on lookout for metrics team within AWS to streamline the process of creating and deploying new anomoly detectors to the lookout for metrics service
+        \item[--] Automated user entry into the Lookout for Metric service by automatically parsing CSV/JSON files and inferring necessary configs using Kotlin.
+        \item[--] Learned how to create APIs using Amazon's internal builder tools to interact with their service and cloud technologies within AWS such as Lookout For Metrics, S3, and API Gateway
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Data Science/Machine Learning Intern - Coupang} & \hfill Jun 2021 - Sept 2021 \\[1.75pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Worked on a machine learning model to categorize items on Coupang's marketplace automatically in order to allow users to find items more easily without needing seller input
+            \item[--] Used cloud technologies such as AWS EC2 and S3 and worked extensively with SQL, Hive and Zeppelin to query and analyze billions of rows of data
+            \item[--] Created end-to-end ML pipeline in PyTorch, utilizing both text and image inputs using groundbreaking techniques, such as automatic mixed-precision, distributed data-parallel, and decision-level fusion to take in both the picture and title of the product 
+        \end{itemize}
+        \end{minipage}
+    }
+    \end{tabularx}
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+        \textbf{Software Team Member/Machine Learning Engineer- Husky Satellite Lab} & \hfill Nov 2020 - Present \\[1.75pt]
+        \multicolumn{2}{@{}X@{}}{
+        \begin{minipage}[t]{\linewidth}
+            \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+                \item[--] Learned C and C++ in a short period of time to create a guidance system for our satellite based on pictures of stars taken by an onboard camera
+                \item[--] Read many research papers in order to understand different algorithms used to detect stars in image and determine our heading based on the detected stars. Implemented these algorithms from scratch in C++
+                \item[--] Proposed and implementing a machine learning model to automatically do all the image processing and star detection in one shot. Utilizing Tensorflow Lite so we can work with microcontrollers on our satellite 
+            \end{itemize}
+            \end{minipage}
+        }
+        \end{tabularx}
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+        \textbf{Software Engineering Intern - Coupang} & \hfill Jun 2020 - Sept 2020 \\[1.75pt]
+        \multicolumn{2}{@{}X@{}}{
+        \begin{minipage}[t]{\linewidth}
+            \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+                \item[--] Worked extensively in an industry environment. Learned the DevOps life cycle and the Agile development approach quickly. 
+                \item[--] Used Spring and JUnit in order to create API tests in our Java source code.
+                \item[--] Worked with Jenkins and other continuous integration tools in order to provide a full dev-ops pipeline for our team. Created my own build jobs which hosted end-to-end test, and worked with Groovy pipeline scripts in order to automatically trigger and provide feedback. 
+                \item[--] Learned an automated web manipulation software, Puppeteer, in a very short period of time in order to create end-to-end test for our service. 
+                \item[--] I suggested, learned, and created Tensorflow models for Machine Learning purposes that would elevate our platform to the next level. Used both Neural Networks and Boosted Trees for different models.
+                \item[--] Using React, I was able to create tools that would interact with multiple APIs to display information from our database in a clean and organized way.
+            \end{itemize}
+            \end{minipage}
+        }
+        \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}} 
+2019 - 2023 & Bachelor's Degree \textbf{University of Washington - Seattle} \hfill (GPA: 3.74/4.0) \\
+ & \textbf{Dean's List:} \\
+ & 2019 - 2020: Winter, Spring \\
+ & 2020 - 2021: Autumn, Winter, Spring \\
+ & 2021 - 2022: Winter, Spring \\
+
+2017 - 2019 & Eastlake High School \hfill  \\
+
+2015 - 2017 & International School of Hyderabad \hfill  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Java, Python, Machine Learning &  \normalsize{Data Science, Tensorflow, PyTorch}\\
+C++, Kotlin, Javascript  &  \normalsize{Data Structures, Algorithms}\\  
+\end{tabularx}
+
+\vfill
+
+\end{document}
+
+

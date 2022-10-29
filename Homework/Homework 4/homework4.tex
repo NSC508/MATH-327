@@ -26,7 +26,79 @@
 \maketitle
 
 \begin{questions}
-\question Test
+\question Using only the Archimedean property of $\mathbb{R}$, give a direct $\epsilon - N$ verifictation of the convergence
+of the following sequences
+
+a. $\frac{2}{\sqrt{n}} + \frac{1}{n} + 3$
+
+For any $\epsilon > 0$, by the Archimedean property there exists some $N \in \mathbb{N}$ with
+$N > \frac{\sqrt{3}}{\epsilon}$. Then, for any $n \geq N$
+
+\[n \leq \frac{3}{n^2} \leq \frac{3}{N^2} < \epsilon^2\]
+
+So $|a_n - 3| < \epsilon$ where $a_n$ is the sequence. 
+
+So, the sequence converges to 3. 
+
+b. $\frac{n^2}{n^2 + n}$
+
+Given $\epsilon > 0$, by the Archimedean property there exists some $N \in \mathbb{N}$ with
+$N < \epsilon$. Then, for any $n \geq N$
+
+\[n \geq \frac{1}{n} \geq \frac{1}{N} > \frac{1}{\epsilon}\]
+
+So $|a_n - 1| < \epsilon$ where $a_n$ is the sequence.
+
+So, the sequence converges to 1.
+
+\question Prove that 
+
+\[\lim_{x \to -\infty} n^{\frac{1}{n}} = 1\]
+
+First, we define 
+
+\[\alpha_n = n^{\frac{1}{n}} - 1\]
+
+This implies 
+
+$n^{\frac{1}{n}} = 1 + \alpha_n $
+
+Raising both sides to the $n$th power, we get
+
+$n = (1 + \alpha_n)^n$
+
+Doing binomaial expansion to the right hand side, we get
+
+$n = 1 + n\alpha_n + \frac{n(n-1)}{2}\alpha_n^2 + \frac{n(n-1)(n-2)}{6}\alpha_n^3 + \cdots$
+
+Notice that $n \geq \frac{n(n-1)}{2}\alpha_n^2$. Dividing both sides by $n$, we get 
+
+$1 \leq \frac{n-1}{2}\alpha_n^2$. Re-arranging the terms, we have 
+
+$\alpha_n^2 \leq \frac{2}{n-1}$. 
+
+For any $\epsilon > 0$, by the Archimedean property there exists some $N \in \mathbb{N}$ with
+$N > \frac{2}{\epsilon^2} + 1$. Then, for any $n \geq N$
+
+\[\alpha_n^2 \leq \frac{2}{n - 1} \leq \frac{2}{N - 1} < \epsilon^2\]
+
+So, $|\alpha_n - 0| < \epsilon$ and thus the limit of $\alpha_n$ as $n \to \infty$ is $0$.
+
+Since we defined $\alpha_n$ as $n^{\frac{1}{n}} - 1$, we know that the limit of
+$n^{\frac{1}{n}}$ as $n \to \infty$ is $1$.
+
+\question Suppose that the sequence $\{a_n\}$ converges to $a$ and that $|a| < 1$. 
+Prove that the sequence $\{(a_n)^n\}$ converges to 0. 
+
+Given that $|a| < 1$, we know that there must exist some $\epsilon \in \mathbb{R}$ such that
+$\epsilon = \frac{1 - |a|}{2}$. 
+
+Thus, there exists some $N \in \mathbb{N}$ so that $|a_n - a| < \epsilon$ for all $n \geq N$. This
+implies that $|a_n| < |a + \epsilon|$ for all $n \geq N$. This, in turn, implies 
+$|a_n|^n < |a + \epsilon|^n$.
+
+By proposition 2.28 in the textbook, since $|a + \epsilon| < 1$, $|a + \epsilon|^n$ converges to 0. Since
+$|a_n|^n < |a + \epsilon|^n$ for all $n \geq N$, we know that $(a_n)^n$ converges to 0 as well. 
 
 \end{questions}
 

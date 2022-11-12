@@ -1,0 +1,145 @@
+\documentclass[addpoints]{exam}
+\usepackage[legalpaper]{geometry}
+\usepackage{etoolbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{relsize}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\lt}{\left}
+\newcommand{\rt}{\right}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[3][]{\frac{\partial^{#1} #2}{\partial #3^{#1}}}
+\newcommand{\lam}{\lambda}
+\newcommand{\ansSpace}{\vspace{70mm}}
+
+
+\title{Math 327 Homework 4}
+\author{Sathvik Chinta}
+\date{October 28th, 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{questions}
+\question \textbf{11} \textbf{a}\\
+
+First, we prove that $\frac{\alpha + \beta}{2} \geq \sqrt{\alpha}{\beta}$. 
+
+\begin{align*}
+    (\sqrt{\alpha} - \sqrt{\beta})^2 &\geq 0\\
+    (\sqrt{\alpha} - \sqrt{\beta})(\sqrt{\alpha} - \sqrt{\beta}) &\geq 0\\
+    \alpha - 2\sqrt{\alpha}\sqrt{\beta} + \beta &\geq 0\\
+    \alpha + \beta &\geq 2\sqrt{\alpha}\sqrt{\beta}\\
+    \frac{\alpha + \beta}{2} &\geq \sqrt{\alpha}\sqrt{\beta}\\
+    \frac{\alpha + \beta}{2} &\geq \sqrt{\alpha\beta}
+\end{align*}
+
+Now, we are given two sequences $\{a_n\}$ and $\{b_n\}$ such that 
+$a_{n+1} = \frac{a_n + b_n}{2}$ and $b_{n+1} = \sqrt{a_nb_n}$ with initial values $a_1 = a$ and $b_1 = b$. We want 
+to prove that for all $n \geq 2$:
+
+\[a_n \geq a_{n+1} \geq b_{n+1} \geq b_n\]
+
+We proved already that $\frac{\alpha + \beta}{2} \geq \sqrt{\alpha}{\beta}$ for all $\alpha, \beta \geq 0$. 
+Thus, we know that $a_{n+1} = \frac{a_n + b_n}{2} \geq b_{n+1} = \sqrt{a_nb_n}$ for all $n \geq 1$. Since
+$a_{n} \geq b_{n}$ for all $n \geq 2$, the arithemtic mean of the two values must be less than or equal to $a_n$ but greater than or 
+equal to $b_n$. Thus, we have $a_n \geq a_{n+1} \geq b_n$. Since $a_{n} \geq b_{n}$ for all $n \geq 2$, the geometric mean of these two numbers
+must be greater than or equal to $b_n$ but less than or equal to $a_n$. Thus, we have $a_n \geq b_{n+1} \geq b_n $. 
+
+Combining all that we have proved, we have $a_n \geq a_{n+1} \geq b_{n+1} \geq b_n$ for all $n \geq 2$.
+
+\textbf{b} We look at the sequence $\{a_n\}$ first. We proved previousy that $a_n \geq a_{n+1}$. Thus, we know the sequence
+must be monotonically decreasing. We further know that $a_{n+1} \geq b_{n+1}$ for all $n \geq 1$. Thus, we know that the sequence 
+of $a_n$ must be bounded below by the sequence of $b_n$. Thus, the sequence of $a_n$ must converge. 
+
+Similarly, we can say that the sequence of $b_n$ must be monotonically increasing and bounded above by the sequence of $a_n$. 
+Thus, the sequence of $b_n$ must converge.
+
+By the nested inteval theorem, we know that there is exactly one point $x$ that belongs to the interval [$a_n$, $b_n$] for all $n \geq 1$,
+and both sequences converge to $x$. Thus, we have $x = \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n$. 
+
+Thus, the sequence $\{a_n\}$ and $\{b_n\}$ converge to the same point $x$, and have the same limit. 
+
+\question The solution to the equation $x^2 - x - c = 0$ where $c, x > 0$ is 
+
+\[\frac{\sqrt{4c + 1} + 1}{2}\]
+
+We want to prove that the recursively defined sequence
+
+\[x_{n+1} = \sqrt{c + x_n}\] 
+
+Where $x_1 > 0$ converges monotonically to the same solution. 
+
+Let $f(x) = \sqrt{c + x}$. Then, we say that $x_{n+1} = f(x)$ for ease of notation.
+Notice that if we plug in the solution to our equation, we get $f(\frac{\sqrt{4c + 1} + 1}{2}) = \frac{\sqrt{4c + 1} + 1}{2}$. 
+
+Let $0 < a_n < \frac{\sqrt{4c + 1} + 1}{2}$ for any $a_n$. We can then represent $a_n = \frac{\sqrt{4c + 1} + 1}{2} - \alpha$ for some
+$\alpha \in \mathbb{R}$ where $0 < \alpha < \frac{\sqrt{4c + 1} + 1}{2}$. $f(x_n) = f(\frac{\sqrt{4c + 1} + 1}{2} - \alpha) = 
+\frac{\sqrt{-2(2\alpha - \sqrt{4c + 1} -2c - 1)}}{2}$. Notice that $\frac{\sqrt{-2(2\alpha - \sqrt{4c + 1} -2c - 1)}}{2} > 
+\frac{\sqrt{4c + 1} + 1}{2} - \alpha$ for all $\alpha \in \mathbb{R}$ where $0 < \alpha < \frac{\sqrt{4c + 1} + 1}{2}$. Thus, we know that
+this sequence is monotonically increasing. 
+
+Now, we let $b_n > \frac{\sqrt{4c + 1} + 1}{2}$. Thus, we can represent $b_n = \frac{\sqrt{4c + 1} + 1}{2} + \beta$ for some 
+$\beta \in \mathbb{R}$. $f(x_n) = f(\frac{\sqrt{4c + 1} + 1}{2} + \beta) = \frac{\sqrt{2(2\beta + \sqrt{4c + 1} + 2c + 1)}}{2}$.
+Notice that $\frac{\sqrt{2(2\beta + \sqrt{4c + 1} + 2c + 1)}}{2} < \frac{\sqrt{4c + 1} + 1}{2} + \beta$ for all $\beta \in \mathbb{R}$. 
+Thus, we know that this sequence is monotonically decreasing. 
+
+So, we can write $a_n < a_{n+1} < \frac{\sqrt{4c + 1} + 1}{2} < b_{n+1} < b_n$ for all $n$. Thus, by the nested interval theorem 
+we know that these two sequences must converge to the same point ($\frac{\sqrt{4c + 1} + 1}{2}$), and that point must be the 
+solution to the equation $x^2 - x - c = 0$. 
+
+\question We prove by contradiction. Let $\lim\text{sup}_{n \to \infty} x_n \neq \text{sup} A$. Thus, the sequence $\{x_n\}$ converges to some 
+value $\alpha \neq \text{sup} A$. Thus, $\alpha < \text{sup} A$ or $\alpha > \text{sup} A$. If $\alpha < \text{sup} A$, then there 
+must be some convergent subsequence of $\{x_n\}$ that converges to $\text{sup} A$ by the definition of A, meaning that 
+$\lim\text{sup}_{n \to \infty} x_n \neq \alpha$ which is a contradiction. If $\alpha > \text{sup} A$, then there is some convergent subsequence
+of $\{x_n\}$ that converges to $\alpha$ by the definition of A, meaning that $\alpha$ must be contained in the set $A$, which would make it 
+the supremum of $A$, which is a contradiction. Thus, we have proven that $\lim\text{sup}_{n \to \infty} x_n = \text{sup} A$.
+
+We can follow a similar proof for the infimum. Let $\lim\text{inf}_{n \to \infty} x_n \neq \text{inf} A$. 
+Thus, the sequence $\{x_n\}$ converges to some value $\beta$ which is not the infimum of $A$. Thus, $\beta < \text{inf} A$ or
+$\beta > \text{inf} A$. If $\beta < \text{inf} A$, then there is some convergent subsequence of $\{x_n\}$ that converges to $\beta$ by the
+definition of A, meaning that $\beta$ must be contained in the set $A$, which would make it the infimum of $A$, which is a contradiction.
+If $\beta > \text{inf} A$, then there must be some convergent subsequence of $\{x_n\}$ that converges to $\text{inf} A$ by the definition of A,
+meaning that $\lim\text{inf}_{n \to \infty} x_n \neq \beta$ which is a contradiction. Thus, we have proven that $\lim\text{inf}_{n \to \infty} x_n = \text{inf} A$.
+
+Thus, we have proven that $\lim\text{sup}_{n \to \infty} x_n = \text{sup} A$ and $\lim\text{inf}_{n \to \infty} x_n = \text{inf} A$.
+
+\question 
+
+\textbf{i} 
+
+\textbf{ii}
+
+\question
+
+\textbf{i} Let $f(n) = \sqrt{n + 1} - n$. Notice that $\sqrt{n + 1} - n > \sqrt{n + 2} - n + 1$ for all $n$. Thus, this 
+sequence is monotonically decreasing. However, there is no bound on the sequence, so we cannot say that it converges.
+
+\textbf{ii} Let $f(n) = \sqrt{n+1} - \sqrt{n}$. Notice that $\sqrt{n+1} - \sqrt{n} > \sqrt{n+2} - \sqrt{n+1}$ for all $n$. Thus, this
+sequence is monotonically decreasing. However, notice that when $n < 0$, our equation is undefined. Thus, the limit 
+of this sequence is 0. 
+
+\textbf{iii} Let $f(n) = \sqrt{4n^2 + n - 1} - 2n$. $f(n) < f(n+1)$ for all $n \geq \sqrt{\sqrt{17} - 1}{8}$. Thus, the sequence 
+is monotonically inscreasing. This sequence will only have a limit if there is an upper bound when $n \to \infty$. Let $M$ be such a limit. 
+Thus, there exists no value for which $f(n) > M$ for all $n \geq \sqrt{\sqrt{17} - 1}{8}$. Thus, we can write 
+
+\begin{align*}
+    f(n) &< M \\ 
+    \sqrt{4n^2 + n - 1} - 2n &< M \\
+    n &< \frac{-(m^2 + 1)}{4m - 1}
+\end{align*}
+
+The right side is udefined for when $M = \frac{1}{4}$, thus the limit of this sequence is $\frac{1}{4}$.
+
+\textbf{iv} Let $f(n) = (5^n + 3^n)^{\frac{1}{n}}$. 
+
+\question
+
+\end{questions}
+
+\end{document}

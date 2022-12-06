@@ -1,0 +1,62 @@
+\documentclass[addpoints]{exam}
+\usepackage[legalpaper]{geometry}
+\usepackage{etoolbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{relsize}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\lt}{\left}
+\newcommand{\rt}{\right}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[3][]{\frac{\partial^{#1} #2}{\partial #3^{#1}}}
+\newcommand{\lam}{\lambda}
+\newcommand{\ansSpace}{\vspace{70mm}}
+
+
+\title{Math 327 Homework 7}
+\author{Sathvik Chinta}
+\date{November 29th, 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{questions}
+\question \textbf{3} \\
+
+Let $n = k + 1$. Thus, we can express
+
+\[\sum_{k = 1}^{\infty} \frac{1}{(k+1)[ln(k+1)]^\alpha}\]
+
+As 
+
+\[\sum_{k = 2}^{\infty} \frac{1}{n[ln(n)]^\alpha}\]
+
+The sequence of $log(n)$ is monotonically increasing. Thus, we know that $\frac{1}{nlog(n)}$ must then decrease. We also know that since $n \geq 2$, $\frac{1}{nlog(n)} \geq 0$. Since this sequence is bounded and monotonically decreasing, 
+from the Monotone Convergence Theorem, we know that the sequence $\frac{1}{nlog(n)}$ must thus converge. From theorem 3.27 in the textbook, we know that if $a_1 \geq a_2 \geq a_3... \geq 0$, then the series 
+$\sum_{n = 1}^{\infty} a_n$ converges if and only if the series 
+
+\[\sum_{k = 0}^{\infty} 2^k a_{2^k}\]
+
+Converges. Thus, we can plug this into our equation to get
+
+\begin{align*}
+    &\sum_{k = 1}^{\infty} 2^k \frac{1}{2^k[log(2^k)]^\alpha} \\
+    = &\sum_{k = 1}^{\infty} \frac{1}{(k \log(2))^\alpha} \\
+    = &\frac{1}{\log(2)^\alpha} \sum_{k = 1}^{\infty} \frac{1}{k^\alpha} \\
+\end{align*}
+
+Since $\frac{1}{\log(2)^\alpha}$ is just a value no matter what $\alpha$ is, convergence depends on $\sum_{k = 1}^{\infty} \frac{1}{k^\alpha}$. Using the p-series test, we know that this series only converges if
+$\alpha > 1$. Thus, we know that the series $\sum_{k = 1}^{\infty} \frac{1}{(k+1)[ln(k+1)]^\alpha}$ converges if and only if $\alpha > 1$.
+
+\question \\
+
+\question \\
+
+\end{questions}
+
+\end{document}

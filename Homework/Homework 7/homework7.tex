@@ -1,0 +1,130 @@
+\documentclass[addpoints]{exam}
+\usepackage[legalpaper]{geometry}
+\usepackage{etoolbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{relsize}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\lt}{\left}
+\newcommand{\rt}{\right}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[3][]{\frac{\partial^{#1} #2}{\partial #3^{#1}}}
+\newcommand{\lam}{\lambda}
+\newcommand{\ansSpace}{\vspace{70mm}}
+
+
+\title{Math 327 Homework 7}
+\author{Sathvik Chinta}
+\date{November 29th, 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{questions}
+\question \textbf{10} \\
+
+We want to prove that if a function $f: (a, b) \in \mathbb{R}$
+is uniformly continuous, then it is bounded. \\
+
+By the $\epsilon - \delta$ definition of continuity, 
+a function is continuous in the domain $D$ provided that for
+every positive number $\epsilon$ there is a positive number
+$\delta$ for which 
+
+\[|f(x) - f(y)| < \epsilon \quad \text{if} \quad |x - y| < \delta\]
+
+Let $f$ be a function on $(a, b)$ that is uniformly continuous.\\
+
+We prove by contradiction. Let $f$ be a function on $(a, b)$ that is uniformly continuous but not bounded.\\
+
+Then, for all $M > 0$, there exists $x \in (a, b)$ such that $|f(x)| > M$.\\
+
+Then, $f(x) > M$ or $f(x) < -M$. Then, let $M = \epsilon + f(y)$ where $|x - y| < \delta$.
+
+Then, $f(x) > \epsilon + f(y)$ or $f(x) < -\epsilon - f(y)$. This is equivalent to saying
+that $f(x) - f(y) > \epsilon$ or $f(x) - f(y) < -\epsilon$. In other words:
+
+\[|f(x) - f(y)| > \epsilon\]
+
+However, this is a contradiction to the fact that $f$ is uniformly continuous.\\
+
+
+
+\question \textbf{7} \\
+We are given that $f: [0, 1] \rightarrow \mathbb{R}$ is continuous,
+$f(0) > 0$ and $f(1) = 0$. We want to prove that there is a number
+$x_0 \in (0, 1]$ such that $f(x_0) = 0$ and $f(x) > 0$ for 
+$0 \leq x < x_0$. 
+
+We prove by contradiction. Let $f: [0, 1] \rightarrow \mathbb{R}$ be continuous,
+$f(0) > 0$, $f(1) = 0$, and $x_0 \in (0, 1]$. We say that there is no
+value $x_0$ for which $f(x_0) = 0$ and $f(x) > 0$ for 
+$0 \leq x < x_0$. Let $x_0 = 1$ and $x = 0$. Then, $0 \leq x < x_0$ with
+$x_0 \in (0, 1]$. However, $f(x_0) = 0$ and $f(x) > 0$ from our
+assumptions. This is a contradiction. Thus, there is a value $x_0 \in (0, 1]$
+such that $f(x_0) = 0$ and $f(x) > 0$ for $0 \leq x < x_0$.
+
+\question \textbf{4} \\
+We are given that $f: [-1, 1] \rightarrow \mathbb{R}$ is 
+continuous, $f(-1) > -1$ and $f(1) < 1$. We want to prove that
+$f$ has a fixed point where a fixed point is the point at which the
+line $y = x$ intersects the graph of $f$.
+
+Let's define another function $g: [-1, 1] \rightarrow \mathbb{R}$ by
+$g(x) = f(x) - x$. Then, $g$ is continuous since $f$ is continuous and
+$x$ is continous. We also have that $g(-1) = f(-1) - (-1) > 0$ and
+$g(1) = f(1) - 1 < 0$. 
+
+In other words
+
+\[g(1) < 0 < g(-1)\]
+
+By the Intermediate Value Theorem, there is a number $x_0 \in (-1, 1)$
+such that $g(x_0) = 0$. Then, $f(x_0) = x_0$ since $g(x) = f(x) - x$.
+
+Thus, $f$ has a fixed point.
+
+\question \\
+\textbf{1} \\
+\textbf{a}\\
+False. Let a function be defined as $f(x) = \frac{1}{x - 0.5}$. Then, this function does not have a maximum on the interval [0, 1]\\ 
+\textbf{b}\\
+Yes, if a functionis continous on a closed interval, it must have a minimum. If it were to not have a minimum, then it cannot be continous since
+it would approach infinty\\
+\textbf{c}\\
+No, if the function has it's maximum at x = 1, then the the interval (0, 1) does not contain the maximum. \\
+\textbf{d}\\
+No, the function itself is unbounded so its image cannot be bounded. \\
+\textbf{e}\\
+Yes, if the image is bounded below there must be some $x \in (0, 1)$ such that $f(x) = \text{minimum}$. \\
+
+\textbf{2} \\
+\textbf{a}\\
+x = 1 is the maximizer for this function. \\
+\textbf{b}\\
+x = 0 is the maximizer for this function \\
+\textbf{c}\\
+x = -1 is the maximizer for this function\\
+
+\question \textbf{1} \\
+\textbf{a} \\
+No, let $f(x) = 1$ be our function. Then, $f(\mathbb{R}) = 1$.\\ 
+\textbf{b} \\
+No, if the function is unbounded then its image cannot be an interval\\
+\textbf{c} \\
+No, if the function is unbounded then its image cannot be an interval\\
+\textbf{d} \\
+Yes, since $f(0) < f(x) < f(1)$ for all $0 < x < 1$, the image is the interval [f(0), f(1)]\\
+
+\question \textbf{3} \\
+
+Let $f(x) = \frac{1}{\sqrt{x + x^2}} + x^2 - 2x$. Notice that $f(1) < 0$ and $f(2) > 0$. Thus, there must exist some $x \in (1, 2)$ for
+which $f(x) = 0$ by the Intermediate Value Theorem. 
+\end{questions}
+
+\end{document}

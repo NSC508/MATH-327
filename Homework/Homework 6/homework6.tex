@@ -30,7 +30,7 @@
 
 We want to prove that the function is continuous on the interval $[0,1]$.\\
 
-Let ${x_n}$ be a sequence in $[0,1]$ such that $x_n \to x_0 \in [0, 1]$. By the sum and product properties of convergent
+Let ${x_n}$ be a sequence in $(0,1]$ such that $x_n \to x_0 \in [0, 1]$. By the sum and product properties of convergent
 sequences, we have
 
 \begin{align*}
@@ -39,7 +39,17 @@ sequences, we have
 &= f(x_0)
 \end{align*}
 
-Thus, $f$ is continuous at $x_0$.\\
+When $x_0 = 0$, 
+
+\begin{align*}
+    \lim_{n \to \infty} f(x_n) &= \lim_{n \to \infty} \sqrt{x_0}\\
+    &= 0 \\
+    &= f(x_0)
+\end{align*}
+
+Thus, $f$ is continuous at $x_0$, thus $f$ is continous on the interval $[0, 1]$\\
+
+
 
 \textbf{b}\\
 
@@ -103,7 +113,157 @@ For any $x, y \in [0, 1]$ where $x \neq y$. However, this cannot be true. For in
 and $x = \frac{1}{c + 1}$. Since $\frac{1}{c} > \frac{1}{c + 1}$, $\frac{1}{c} > \sqrt{\frac{1}{c + 1}}$. This is 
 a contradiction to our equation above. Thus, we have proved that the function is not Lipschitz.\\
 
+\question \textbf{10}\\
+We prove both directions using contradiction. First, we assume that $f$ is uniformly continuous, but 
+it does not satisfy the $\epsilon - \delta$ criterion. Then, there exists some $\epsilon > 0$
+such that for any $\delta > 0$, there exists some $u, v \in D$ such that $|u - v| < \delta$ but 
+$|f(u) - f(v)| \geq \epsilon$.\\
 
+Let $\delta = \frac{1}{n}$. Then, there exists sequences $u_n, v_n \in D$ such that $|u_n - v_n| < \frac{1}{n}$
+and $|f(u_n) - f(v_n)| \geq \epsilon$.\\
+
+Taking the limit as $n \to \infty$, we have
+
+\[lim_{n \to \infty} |u_n - v_n| = 0\]
+
+Which implies
+
+\[lim_{n \to \infty} |f(u_n) - f(v_n)| = 0\]
+
+As well since $f$ is uniformly continuous. However, this is a contradiction to our assumption that
+$|f(u_n) - f(v_n)| \geq \epsilon$! 
+
+Next, we prove the other way. Let the $\epsilon - \delta$ criterion be met, but $f$ is not uniformly continuous. 
+Then, there exists some $\epsilon > 0$ such that for any $\delta > 0$, there exists some $u, v \in D$ such that
+$|u - v| < \delta$ and $|f(u) - f(v)| < \epsilon$.\\
+
+Then, there exist some N such that for any $n \geq n$ ,there are sequences 
+$u_n, v_n \in D$ such that $|u_n - v_n| < \delta$ and $|f(u_n) - f(v_n)| < \epsilon$.\\
+
+Furthermore, we let $\lim_{n \to \infty} |u_n - v_n| = 0$.
+
+Thus, knowing that both sequences converge to the same point, the image of our sequences can be written as
+$|(f(u_n) - f(v_n)) - 0| < \epsilon$. Thus, 
+
+\[lim_{n \to \infty} |f(u_n) - f(v_n)| = 0\].
+
+\question \textbf{14} \textbf{a}\\
+
+We define $m = f(1)$. We want to prove that given the property that $f$ has the property 
+
+\[f(u + v) = f(u) + f(v)\]
+
+for all $u, v \in \mathbb{R}$, we have
+
+\[f(x) = mx\]
+
+for all $x \in \mathbb{R}$.\\
+
+We prove by induction. Let's first consider all Natural Numbers. We know that $f(1) = m$. 
+We have the base case as
+
+\[f(1) = m \times 1 = m\]
+
+Assume this property holds for all $x = k$. Thus, 
+
+\[f(k) = mk\]
+
+We want to prove that this property holds for $x = k + 1$. We have
+
+\begin{align*}
+    f(k + 1) &= f(k) + f(1)\\
+    &= mk + m\\
+    &= (k + 1)m
+\end{align*}
+
+Thus, we have proved that the property holds for all $x \in \mathbb{N}$.\\
+
+We now consider $f(0)$. We can re-write this as 
+
+\begin{align*}
+    f(0) &= f(1 - 1)\\
+    &= f(1) - f(1)\\
+    &= m - m\\
+    &= 0
+\end{align*}
+
+We now consider negative x values. We have
+
+\begin{align*}
+    f(-x) &= f(1 - 1 - x)\\
+    &= (f(1) - f(1)) - f(x)\\
+    &= (m - m) - f(x)\\
+    &= 0 - f(x)\\
+    &= -f(x)\\
+    &= -mx
+\end{align*}
+
+Now. we wish to prove this for any rational number that can be expressed $\frac{p}{q}$. Let 
+$q$ be positive. So, we wish to prove 
+
+\[f(\frac{p}{q}) = m\frac{p}{q}\]
+
+\begin{align*}
+    mp &= f(p)\\
+    mp &= f(q\frac{p}{q})\\
+    mp &= f(\frac{p}{q} + \frac{p}{q} + ... + \frac{p}{q}) \text{ where there are q number of $\frac{p}{q}$ terms}\\
+    mp &= f(\frac{p}{q}) + f(\frac{p}{q}) + ... + f(\frac{p}{q})\\
+    mp &= qf(\frac{p}{q})\\ 
+    m\frac{p}{q} &= f(\frac{p}{q})
+\end{align*}
+
+Thus, we have proved that $f(x) = mx$ for all rational numbers $x$.\\
+
+\textbf{b}
+
+We wish to prove that $f(x) = mx$ for all $x$. We are given that $f$ is continuous and 
+that $f(x) = mx$ for all rational numbers $x$. 
+
+If $f$ is continuous, then there exists some sequence ${x_n}$  such that 
+if $x_n \to x_0$, then $f(x_n) \to f(x_0)$.
+
+Since $\mathbb{Q}$ is dense in $\mathbb{R}$, we can find a sequence ${x_n} \in \mathbb{Q}$ such that
+$x_n \to x_0$.
+
+Thus, the $\lim_{n \to \infty} f(x_n) = f(x_0)$. 
+
+Thus, we have proved that $f(x) = mx$ for all $x$.\\
+
+\question \textbf{4}
+
+We want to prove the function does not satisfy the $\epsilon - \delta$ criterion at the point
+$x_0 = \frac{3}{4}$. Indeed, take $\epsilon = 1.875$. There is no positive number $\delta$ having
+the property such that 
+
+\[-1.875 < f(x) < 1.875\]
+
+Around the point $$\frac{3}{4}$$. This, the function does not satisfy the $\epsilon - \delta$ criterion.
+
+\question \textbf{1} \textbf{a} \\
+
+No, let $f$ be a function that is defined at every point except $x = 0$ and let $g$ be defined only
+at $x = 0$. Then, nether function is continuous at every point, but their sum is continuous at every point.\\
+
+\textbf{b} \\
+
+Yes, if the function squared is continous at every point, then the function is continuous at every point 
+becuase every number must have a positive square root.\\
+
+\textbf{c} \\
+
+No, if $g$ and $f + g$ are continuous, that does not necessarily mean that $f$ is continuous. Let 
+$f$ be defined as a piecewise function with a break at $x = 0$. Then, $f$ is not continuous at $x = 0$,
+but $f + g$ is continuous at $x = 0$ since the $g$ component would "fill in" the gap.\\
+
+\textbf{d} \\
+
+Yes, since $\mathbb{N}$ is dense in $\mathbb{R}$, we can find a sequence of rational numbers
+that converges to $x_0$. Thus, the limit of $f(x_n)$ is $f(x_0)$.\\
+
+\question \textbf{6}
+
+For this function to be continous at a point, $x^2 = -x^2$ at that point. 
+Thus, $x = 0$. However, there is no irrational number whose square is $0$. Thus, the function is not continuous at any point.\\
 
 \end{questions}
 

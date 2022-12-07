@@ -30,14 +30,14 @@
 
 Let $n = k + 1$. Thus, we can express
 
-\[\sum_{k = 1}^{\infty} \frac{1}{(k+1)[ln(k+1)]^\alpha}\]
+\[\sum_{k = 1}^{\infty} \frac{1}{(k+1)[\ln(k+1)]^\alpha}\]
 
 As 
 
-\[\sum_{k = 2}^{\infty} \frac{1}{n[ln(n)]^\alpha}\]
+\[\sum_{n = 2}^{\infty} \frac{1}{n[\ln(n)]^\alpha}\]
 
-The sequence of $log(n)$ is monotonically increasing. Thus, we know that $\frac{1}{nlog(n)}$ must then decrease. We also know that since $n \geq 2$, $\frac{1}{nlog(n)} \geq 0$. Since this sequence is bounded and monotonically decreasing, 
-from the Monotone Convergence Theorem, we know that the sequence $\frac{1}{nlog(n)}$ must thus converge. From theorem 3.27 in the textbook, we know that if $a_1 \geq a_2 \geq a_3... \geq 0$, then the series 
+The sequence of $\ln(n)$ is monotonically increasing. Thus, we know that $\frac{1}{n\ln(n)}$ must then decrease. We also know that since $n \geq 2$, $\frac{1}{nlog(n)} \geq 0$. Since this sequence is bounded and monotonically decreasing, 
+from the Monotone Convergence Theorem, we know that the sequence $\frac{1}{n\ln(n)}$ must thus converge. From theorem 3.27 in the textbook, we know that if $a_1 \geq a_2 \geq a_3... \geq 0$, then the series 
 $\sum_{n = 1}^{\infty} a_n$ converges if and only if the series 
 
 \[\sum_{k = 0}^{\infty} 2^k a_{2^k}\]
@@ -45,18 +45,96 @@ $\sum_{n = 1}^{\infty} a_n$ converges if and only if the series
 Converges. Thus, we can plug this into our equation to get
 
 \begin{align*}
-    &\sum_{k = 1}^{\infty} 2^k \frac{1}{2^k[log(2^k)]^\alpha} \\
-    = &\sum_{k = 1}^{\infty} \frac{1}{(k \log(2))^\alpha} \\
-    = &\frac{1}{\log(2)^\alpha} \sum_{k = 1}^{\infty} \frac{1}{k^\alpha} \\
+    &\sum_{k = 1}^{\infty} 2^k \frac{1}{2^k[\ln(2^k)]^\alpha} \\
+    = &\sum_{k = 1}^{\infty} \frac{1}{(k \ln(2))^\alpha} \\
+    = &\frac{1}{\ln(2)^\alpha} \sum_{k = 1}^{\infty} \frac{1}{k^\alpha} \\
 \end{align*}
 
-Since $\frac{1}{\log(2)^\alpha}$ is just a value no matter what $\alpha$ is, convergence depends on $\sum_{k = 1}^{\infty} \frac{1}{k^\alpha}$. Using the p-series test, we know that this series only converges if
-$\alpha > 1$. Thus, we know that the series $\sum_{k = 1}^{\infty} \frac{1}{(k+1)[ln(k+1)]^\alpha}$ converges if and only if $\alpha > 1$.
+Since $\frac{1}{\ln(2)^\alpha}$ is just a value no matter what $\alpha$ is, convergence depends on 
+$\sum_{k = 1}^{\infty} \frac{1}{k^\alpha}$. Using the p-series test, we know that this series only converges if
+$\alpha > 1$. Thus, we know that the series $\sum_{k = 1}^{\infty} \frac{1}{(k+1)[\ln(k+1)]^\alpha}$ converges if and only if $\alpha > 1$.
 
 \question \\
 
+We are given that the series $\sum_{n = 1}^{\infty} a_n$ converges and that the sequence $\{b_n\}$ is monotonic and bounded. 
+We wish to prove that $\sum_{n = 1}^{\infty} a_n b_n$ must also converge. 
+
+By the Monotone Convergence Theorem, we know that $\{b_n\}$ must then converge. Thus, we can write
+
+\[b_n \leq M\]
+
+For some value M. Then we can write 
+
+\[\sum_{n = 1}^{\infty} a_n b_n \leq \sum_{n = 1}^{\infty} a_n M = M \sum_{n = 1}^{\infty} a_n\]
+
+Since $\sum_{n = 1}^{\infty} a_n$, we know that $M \sum_{n = 1}^{\infty} a_n$ must converge as well. 
+
+Since we have an upper bound that converges, we know that the series $\sum_{n = 1}^{\infty} a_n b_n$ must also converge by the 
+Comparison Test.
+
 \question \\
 
+\textbf{i} \\
+
+We can write $\sum_{n = 1}^{\infty} a_n$ as 
+
+\begin{align*}
+    \sum_{n = 1}^{\infty} a_n &= \left(\frac{1}{3} + \frac{1}{27} + \frac{1}{243} + \dots \right) + \left(\frac{1}{4} + \frac{1}{16} + \frac{1}{64} + \dots \right) \\
+    &= \left(\frac{1}{3} + \frac{1}{3}^3 + \frac{1}{3}^5 + \dots \right) + \left(\frac{1}{2}^2 + \frac{1}{2}^4 + \frac{1}{2}^6 + \dots \right) \\
+    &= \sum_{n = 0}^{\infty} \frac{1}{3}^{2n+1} + \sum_{n = 0}^{\infty} \frac{1}{2}^{2n} \\
+    &\text{Let $i = 2n+1$ and $j = 2n$} \\ 
+    &= \sum_{i = 1}^{\infty} \frac{1}{3}^i + \sum_{j = 0}^{\infty} \frac{1}{2}^j \\
+    &= \sum_{i = 0}^{\infty} \frac{1}{3}^i - \frac{1}{3}^0 + \sum_{j = 0}^{\infty} \frac{1}{2}^j \\
+    &= \frac{1}{1 - \frac{1}{3}} - 1 + \frac{1}{1 - \frac{1}{2}} \\
+    &= \frac{5}{2}
+\end{align*}
+
+Thus, we have proved the series $\sum_{n = 1}^{\infty} a_n$ converges to $\frac{5}{2}$ and is thus convergent. 
+
+\textbf{ii} \\
+
+Let $n$ be even. Then, we can express $\frac{a_{n+1}}{a_n}$ as 
+
+\[\frac{3^{-n + 1}}{2^{-n}} = \frac{(\frac{2}{3})^n}{3}\]
+
+This series is monotonically decreasing. The limit as this series appraoches infinity is 0. Thus, the infimum is 0. 
+The supremum is thus the beginning of our series. The first even number that $n$ can be is 2. Thus, we can write the supremum of this 
+as $\frac{(\frac{2}{3})^(2)}{3} = \frac{4}{27}$. 
+
+Now, let $n$ be odd. Then, we can express $\frac{a_{n+1}}{a_n}$ as 
+
+\[\frac{2^{-n + 1}}{3^{-n}} = \frac{(\frac{3}{2})^n}{2}\]
+
+This series is monotonically increasing. The limit as this series appraoches infinity is infinity. Thus, the sequence is unbounded
+and there is no supremum. The infimum will be the beginning of our series. The first odd number that $n$ can be is 1. Thus, we can write the infimum of this
+as $\frac{(\frac{3}{2})^(1)}{2} = \frac{3}{4}$.
+
+The overall infimum thus is 0 while the overall supremum is infinity. 
+
+The ratio test gives us no information about whether the series is convergent or not since it gives different values for $l$.
+Wheb $n$ is even, $l < 1$ so the series should converge by the ratio test. When $n$ is odd, $l > 1$ so the series should diverge by the ratio test.
+Thus, we cannot use the ratio test to determine whether the series converges or not.
+
+\textbf{iii} \\
+
+Let $n$ be even. Then, we can write $(a_n)^{\frac{1}{n}}$ as 
+
+\[\frac{1}{2^n}^{\frac{1}{n}} = \frac{1}{2}\]
+
+Now, let $n$ be odd. Then, we can write $(a_n)^{\frac{1}{n}}$ as 
+
+\[\frac{1}{3^n}^{\frac{1}{n}} = \frac{1}{3}\]
+
+The infimum is thus $\frac{1}{3}$ while the supremum is $\frac{1}{2}$.
+
+Both of these values are $< 1$, thus they imply the sequence is convergent by the root test. Thus, we can use the root test to decide
+if its convergent. 
+
+\question
+
+\question 
+
+\question 
 \end{questions}
 
 \end{document}

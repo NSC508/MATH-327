@@ -1,5 +1,5 @@
-# Fdb version 3
-["pdflatex"] 1669785488 "/workspaces/MATH-327/Homework/Homework 7/homework7.tex" "homework7.pdf" "homework7" 1669785488
+# Fdb version 4
+["pdflatex"] 1670374550 "/workspaces/MATH-327/Homework/Homework 7/homework7.tex" "homework7.pdf" "homework7" 1670374551 2
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -67,11 +67,11 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty" 1654720880 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty" 1580250785 17914 4c28a13fc3d975e6e81c9bea1d697276 ""
-  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def" 1663965850 48197 fc0156fb060f4e3367a06bf2259f0a54 ""
-  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty" 1663965850 222717 db0002f5ce98ef1fbf091c8625b33d7e ""
-  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty" 1652818262 12951 45609f529c67717a6d5046d7f3d77f03 ""
-  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def" 1663965850 14249 ef956b0ffc2684335723dc9cc40c5ce7 ""
-  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def" 1663965850 117125 ae375b0a1c0bb31bb9fee2337fb337fc ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def" 1668456740 48272 52af74196dd55e6c486243beada2adcd ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty" 1668456740 222727 cfc4e76008392378678e691ec73ef8f0 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty" 1668456740 12947 2cb391007415dfa63f4c5ba1610afddb ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def" 1668456740 14249 c27c0c7065e940126403e065c08683b6 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def" 1668456740 117125 a8ce97e3b03f76decc5ad7e8d4da3088 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty" 1655478651 22555 6d8e155cfef6d82c3d5c742fea7c992e ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty" 1665067230 13815 760b0c02f691ea230f5359c4e1de23a7 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1666901542 30426 f2fb69fcda4dc35ed0b7dee211bce679 ""
@@ -82,15 +82,16 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/tools/enumerate.sty" 1654720880 3468 46ba9177f0f0a79fe79845d3eebff113 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
-  "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1668319446 4606425 c89281e7e3b450406f10e7850870bdd4 ""
-  "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1668319472 3063396 3f53f0f52fee6d9086a00c950ce8be15 ""
-  "/usr/local/texlive/2022/texmf.cnf" 1668319443 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "/workspaces/MATH-327/Homework/Homework 7/homework7.tex" 1669785487 4628 24fd567aa992be4d61c0147fcca40ccb ""
-  "homework7.aux" 1669785488 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "homework7.out" 0 -1 0 "pdflatex"
-  "homework7.tex" 1669785487 4628 24fd567aa992be4d61c0147fcca40ccb ""
+  "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1669901599 4623329 5e28269c2aee4b9e2f0ef6bdcff03654 ""
+  "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1669901618 3063414 8bc533c15881d2f6713f5d164dfde6a7 ""
+  "/usr/local/texlive/2022/texmf.cnf" 1669901594 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "/workspaces/MATH-327/Homework/Homework 7/homework7.tex" 1670374550 4628 24fd567aa992be4d61c0147fcca40ccb ""
+  "homework7.aux" 1670374551 1713 be989610d9851cc07aba4d6be2749109 "pdflatex"
+  "homework7.out" 1670374550 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "homework7.tex" 1670374550 4628 24fd567aa992be4d61c0147fcca40ccb ""
   (generated)
   "homework7.aux"
   "homework7.log"
   "homework7.out"
   "homework7.pdf"
+  (rewritten before read)
